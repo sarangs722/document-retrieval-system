@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-29T04:46:13.161369+00:00",
+  "all_containers_recreated": true,
+  "services": {
+    "api": {
+      "before": "168120d36e51",
+      "after": "4ae1ba76784b"
+    },
+    "chroma": {
+      "before": "87e6b068435e",
+      "after": "b5571cac4c6b"
+    },
+    "postgres": {
+      "before": "6ae12181bdcb",
+      "after": "35b58871454a"
+    }
+  }
+}

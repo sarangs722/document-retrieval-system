@@ -1,0 +1,107 @@
+{
+  "reviewed_at": "2026-10-29T12:58:55.622845+00:00",
+  "reviewer": "Coding agent; not independent human adjudication",
+  "method": "Manual reading of actual answer claims, cited bounded snapshots, expected answers, and source pages. No regex or LLM judge score.",
+  "audit_sha256": "fbf6fd9dd91fe124687c013312131fc5a7f6c7d4cbc5c7339c77e45aea992fa3",
+  "reference_note": "ANSWER_REVIEW.md",
+  "questions": [
+    {
+      "id": "aes-01",
+      "target_verdict": "correct",
+      "claim_support_verdict": "contradicted_extra_claim",
+      "notes": "Rounds 4/6/8 confuses Nk with Nr; PDF p12 lists 10/12/14.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "aes-06",
+      "target_verdict": "clean_refusal",
+      "claim_support_verdict": "appropriate_refusal",
+      "notes": "No hardware throughput invented.",
+      "structural_citation_status": "missing"
+    },
+    {
+      "id": "sha3-01",
+      "target_verdict": "incorrect",
+      "claim_support_verdict": "unsupported_answer",
+      "notes": "KECCAK-p permutations are not the two SHA-3 XOF names.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "sha3-06",
+      "target_verdict": "clean_refusal",
+      "claim_support_verdict": "appropriate_refusal",
+      "notes": "No processor latency invented.",
+      "structural_citation_status": "missing"
+    },
+    {
+      "id": "modes-01",
+      "target_verdict": "correct",
+      "claim_support_verdict": "partially_supported",
+      "notes": "Cited bounded passage says five modes but does not enumerate their names.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "modes-06",
+      "target_verdict": "clean_refusal",
+      "claim_support_verdict": "appropriate_refusal",
+      "notes": "Supported topical context followed by refusal of organizational detail.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "gcm-01",
+      "target_verdict": "correct",
+      "claim_support_verdict": "partially_supported",
+      "notes": "Conditional IV algorithm does not entail a recommendation to restrict IV length.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "gcm-06",
+      "target_verdict": "mixed_refusal",
+      "claim_support_verdict": "unsupported_assertion",
+      "notes": "Claims a company production key is specified, then says it is not provided.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "ai-rmf-01",
+      "target_verdict": "correct",
+      "claim_support_verdict": "supported",
+      "notes": "Cited excerpt explicitly says voluntary.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "ai-rmf-06",
+      "target_verdict": "clean_refusal",
+      "claim_support_verdict": "appropriate_refusal",
+      "notes": "No company board threshold invented.",
+      "structural_citation_status": "missing"
+    },
+    {
+      "id": "authentication-01",
+      "target_verdict": "correct",
+      "claim_support_verdict": "supported",
+      "notes": "Cited excerpt explicitly requires 15 characters for single-factor passwords.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "authentication-06",
+      "target_verdict": "clean_refusal",
+      "claim_support_verdict": "appropriate_refusal",
+      "notes": "No account recovery code invented.",
+      "structural_citation_status": "missing"
+    },
+    {
+      "id": "incident-response-01",
+      "target_verdict": "correct",
+      "claim_support_verdict": "partially_supported",
+      "notes": "Recover central fact supported; added minimizing-impact claim is broader than cited evidence.",
+      "structural_citation_status": "valid"
+    },
+    {
+      "id": "incident-response-06",
+      "target_verdict": "clean_refusal",
+      "claim_support_verdict": "appropriate_refusal",
+      "notes": "No breach record count invented.",
+      "structural_citation_status": "missing"
+    }
+  ]
+}

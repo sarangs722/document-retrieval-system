@@ -1,0 +1,938 @@
+{
+  "name": "nist-technical-v1",
+  "version": 1,
+  "annotation_method": "Agent-authored from PDF text and representative rendered pages, before retrieval. Not independently human-adjudicated. Exact-quote occurrences within the source document are alternative evidence anchors. Judgments are not exhaustive.",
+  "page_numbering": "One-based physical PDF pages, including cover and front matter.",
+  "questions": [
+    {
+      "id": "aes-01",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "aes",
+      "query": "Which three key lengths does FIPS 197 specify for AES?",
+      "answerable": true,
+      "expected_answer": "128, 192, and 256 bits.",
+      "evidence": [
+        {
+          "document_id": "aes",
+          "page": 9,
+          "quote": "AES-128, AES-192, and AES-256, where the suffx indicates the bit length of the key."
+        }
+      ]
+    },
+    {
+      "id": "aes-02",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "aes",
+      "query": "If I switch from AES-128 to AES-256, does the size of each encrypted data block change?",
+      "answerable": true,
+      "expected_answer": "No. All three AES variants use 128-bit blocks.",
+      "evidence": [
+        {
+          "document_id": "aes",
+          "page": 9,
+          "quote": "is 128 bits in each case."
+        }
+      ]
+    },
+    {
+      "id": "aes-03",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "aes",
+      "query": "How many rounds are assigned to AES-256 in FIPS 197?",
+      "answerable": true,
+      "expected_answer": "14 rounds.",
+      "evidence": [
+        {
+          "document_id": "aes",
+          "page": 12,
+          "quote": "Nr is assigned to 10, 12, and 14 for AES128, AES-192, and AES-256, respectively."
+        }
+      ]
+    },
+    {
+      "id": "aes-04",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "aes",
+      "query": "How is the AES state array arranged in terms of bytes, rows, and columns?",
+      "answerable": true,
+      "expected_answer": "16 bytes arranged in four rows and four columns.",
+      "evidence": [
+        {
+          "document_id": "aes",
+          "page": 12,
+          "quote": "a two-dimensional array of 16 bytes, with rows and columns indexed from 0 to 3."
+        }
+      ]
+    },
+    {
+      "id": "aes-05",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "aes",
+      "query": "In what year did NIST announce Rijndael as the AES competition winner?",
+      "answerable": true,
+      "expected_answer": "2000.",
+      "evidence": [
+        {
+          "document_id": "aes",
+          "page": 3,
+          "quote": "In 2000, NIST announced the selection of the Rijndael block cipher family"
+        }
+      ]
+    },
+    {
+      "id": "aes-06",
+      "split": "test",
+      "category": "unanswerable",
+      "topic_document_id": "aes",
+      "query": "What AES-256 throughput in gigabytes per second does FIPS 197 report for an NVIDIA RTX 5090?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No throughput measurement for that GPU is provided.",
+      "absent_term": "RTX 5090",
+      "evidence": []
+    },
+    {
+      "id": "sha2-01",
+      "split": "dev",
+      "category": "fact",
+      "topic_document_id": "sha2",
+      "query": "What two stages describe each secure hash algorithm in FIPS 180-4?",
+      "answerable": true,
+      "expected_answer": "Preprocessing and hash computation.",
+      "evidence": [
+        {
+          "document_id": "sha2",
+          "page": 8,
+          "quote": "two stages: preprocessing and hash computation."
+        }
+      ]
+    },
+    {
+      "id": "sha2-02",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "sha2",
+      "query": "Before computing a secure hash, what does FIPS 180-4 say to do to the input message and initialization values?",
+      "answerable": true,
+      "expected_answer": "Pad the message, parse it into m-bit blocks, and set initialization values.",
+      "evidence": [
+        {
+          "document_id": "sha2",
+          "page": 8,
+          "quote": "Preprocessing involves padding a message, parsing the padded message into m-bit blocks, and setting initialization values"
+        }
+      ]
+    },
+    {
+      "id": "sha2-03",
+      "split": "dev",
+      "category": "fact",
+      "topic_document_id": "sha2",
+      "query": "What is the range of message digest lengths in FIPS 180-4?",
+      "answerable": true,
+      "expected_answer": "160 to 512 bits.",
+      "evidence": [
+        {
+          "document_id": "sha2",
+          "page": 4,
+          "quote": "The message digests range in length from 160 to 512 bits"
+        }
+      ]
+    },
+    {
+      "id": "sha2-04",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "sha2",
+      "query": "For SHA-256, how large is each padded message block before processing?",
+      "answerable": true,
+      "expected_answer": "512 bits.",
+      "evidence": [
+        {
+          "document_id": "sha2",
+          "page": 19,
+          "quote": "the message and its padding are parsed into N 512-bit blocks"
+        }
+      ]
+    },
+    {
+      "id": "sha2-05",
+      "split": "dev",
+      "category": "fact",
+      "topic_document_id": "sha2",
+      "query": "How many words and what word size represent a SHA-512 message block?",
+      "answerable": true,
+      "expected_answer": "Sixteen 64-bit words.",
+      "evidence": [
+        {
+          "document_id": "sha2",
+          "page": 19,
+          "quote": "the 1024 bits of the input block may be expressed as sixteen 64-bit words"
+        }
+      ]
+    },
+    {
+      "id": "sha2-06",
+      "split": "dev",
+      "category": "unanswerable",
+      "topic_document_id": "sha2",
+      "query": "How many watts does the AMD Ryzen 9950X consume while hashing with SHA-256 according to these documents?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No processor power benchmark is provided.",
+      "absent_term": "9950X",
+      "evidence": []
+    },
+    {
+      "id": "sha3-01",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "sha3",
+      "query": "What are the two extendable-output functions named in FIPS 202?",
+      "answerable": true,
+      "expected_answer": "SHAKE128 and SHAKE256.",
+      "evidence": [
+        {
+          "document_id": "sha3",
+          "page": 3,
+          "quote": "two extendable-output functions (XOFs), called SHAKE128 and SHAKE256."
+        }
+      ]
+    },
+    {
+      "id": "sha3-02",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "sha3",
+      "query": "What does the number after the dash in SHA3-256 tell us?",
+      "answerable": true,
+      "expected_answer": "The fixed digest length in bits: 256.",
+      "evidence": [
+        {
+          "document_id": "sha3",
+          "page": 9,
+          "quote": "the suffix after the dash indicates the fixed length of the digest"
+        }
+      ]
+    },
+    {
+      "id": "sha3-03",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "sha3",
+      "query": "Is the number 128 in SHAKE128 a fixed output length or something else?",
+      "answerable": true,
+      "expected_answer": "It indicates the generally supported security strength, not a fixed digest length.",
+      "evidence": [
+        {
+          "document_id": "sha3",
+          "page": 9,
+          "quote": "indicate the security strengths that the se two functions can generally4 support"
+        }
+      ]
+    },
+    {
+      "id": "sha3-04",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "sha3",
+      "query": "Which KECCAK-p permutation underlies the six SHA-3 functions?",
+      "answerable": true,
+      "expected_answer": "KECCAK-p[1600, 24], equivalent to KECCAK-f[1600].",
+      "evidence": [
+        {
+          "document_id": "sha3",
+          "page": 25,
+          "quote": "the KECCAK-p[1600, 24] permutation, which underlies the six SHA-3 functions"
+        }
+      ]
+    },
+    {
+      "id": "sha3-05",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "sha3",
+      "query": "Why does FIPS 202 append a two-bit suffix to messages for the SHA-3 hash functions?",
+      "answerable": true,
+      "expected_answer": "To distinguish them from SHA-3 XOFs and facilitate domain-specific variants.",
+      "evidence": [
+        {
+          "document_id": "sha3",
+          "page": 10,
+          "quote": "in order to distinguish the SHA -3 hash functions from the SHA -3 XOFs"
+        }
+      ]
+    },
+    {
+      "id": "sha3-06",
+      "split": "test",
+      "category": "unanswerable",
+      "topic_document_id": "sha3",
+      "query": "What is the measured SHAKE128 latency on an Apple M5 processor in this corpus?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No Apple M5 latency benchmark is provided.",
+      "absent_term": "Apple M5",
+      "evidence": []
+    },
+    {
+      "id": "modes-01",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "modes",
+      "query": "Which five confidentiality modes are defined in SP 800-38A?",
+      "answerable": true,
+      "expected_answer": "ECB, CBC, CFB, OFB, and CTR.",
+      "evidence": [
+        {
+          "document_id": "modes",
+          "page": 5,
+          "quote": "Electronic Codebook (ECB), Cipher Block Chaining (CBC), Cipher Feedback (CFB), Output Feedback (OFB), and Counter (CTR)."
+        }
+      ]
+    },
+    {
+      "id": "modes-02",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "modes",
+      "query": "For CBC encryption, must the initialization vector be kept secret, and what unpredictability condition applies?",
+      "answerable": true,
+      "expected_answer": "It need not be secret, but it must be unpredictable.",
+      "evidence": [
+        {
+          "document_id": "modes",
+          "page": 17,
+          "quote": "The IV need not be secret, but it must be unpredictable"
+        },
+        {
+          "document_id": "modes",
+          "page": 18,
+          "quote": "The IV need not be secret, but it must be unpredictable"
+        }
+      ]
+    },
+    {
+      "id": "modes-03",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "modes",
+      "query": "Can inverse cipher operations for multiple CBC ciphertext blocks be run simultaneously?",
+      "answerable": true,
+      "expected_answer": "Yes. CBC decryption can perform multiple inverse cipher operations in parallel.",
+      "evidence": [
+        {
+          "document_id": "modes",
+          "page": 18,
+          "quote": "multiple inverse cipher operations can be performed in parallel."
+        }
+      ]
+    },
+    {
+      "id": "modes-04",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "modes",
+      "query": "Does CTR counter uniqueness apply only within one message or across messages using a key?",
+      "answerable": true,
+      "expected_answer": "Across all messages encrypted under a given key.",
+      "evidence": [
+        {
+          "document_id": "modes",
+          "page": 22,
+          "quote": "across all of the messages that are encrypted under the given key, all of the counters must be distinct."
+        }
+      ]
+    },
+    {
+      "id": "modes-05",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "modes",
+      "query": "Which modes in SP 800-38A require complete plaintext blocks or segments before encryption?",
+      "answerable": true,
+      "expected_answer": "ECB, CBC, and CFB.",
+      "evidence": [
+        {
+          "document_id": "modes",
+          "page": 24,
+          "quote": "For the ECB, CBC, and CFB modes, the plaintext must be a sequence of one or more complete data blocks"
+        }
+      ]
+    },
+    {
+      "id": "modes-06",
+      "split": "test",
+      "category": "unanswerable",
+      "topic_document_id": "modes",
+      "query": "Which block cipher mode is used by the internal database at CedarFin, according to these PDFs?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "The corpus does not document CedarFin’s database.",
+      "absent_term": "CedarFin",
+      "evidence": []
+    },
+    {
+      "id": "gcm-01",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "gcm",
+      "query": "What IV length does SP 800-38D recommend restricting GCM implementations to?",
+      "answerable": true,
+      "expected_answer": "96 bits.",
+      "evidence": [
+        {
+          "document_id": "gcm",
+          "page": 16,
+          "quote": "restrict support to the length of 96 bits"
+        }
+      ]
+    },
+    {
+      "id": "gcm-02",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "gcm",
+      "query": "In GCM, is additional authenticated data encrypted as well as authenticated?",
+      "answerable": true,
+      "expected_answer": "No. Its authenticity is protected, but it remains in the clear.",
+      "evidence": [
+        {
+          "document_id": "gcm",
+          "page": 16,
+          "quote": "GCM also protects the confidentiality of the plaintext, while the AAD is left in the clear."
+        }
+      ]
+    },
+    {
+      "id": "gcm-03",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "gcm",
+      "query": "What does the GMAC specialization of GCM do?",
+      "answerable": true,
+      "expected_answer": "Authentication only, on data that is not encrypted.",
+      "evidence": [
+        {
+          "document_id": "gcm",
+          "page": 10,
+          "quote": "GMAC, is simply an authentication m ode on the input data."
+        }
+      ]
+    },
+    {
+      "id": "gcm-04",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "gcm",
+      "query": "Does a GCM implementation need the inverse direction of its block cipher?",
+      "answerable": true,
+      "expected_answer": "No. Only the forward direction is required.",
+      "evidence": [
+        {
+          "document_id": "gcm",
+          "page": 10,
+          "quote": "The GCM functions require only the forward direction of the underlying block cipher"
+        }
+      ]
+    },
+    {
+      "id": "gcm-05",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "gcm",
+      "query": "What are the five general GCM authentication-tag lengths before the special 64-bit and 32-bit cases?",
+      "answerable": true,
+      "expected_answer": "128, 120, 112, 104, or 96 bits.",
+      "evidence": [
+        {
+          "document_id": "gcm",
+          "page": 17,
+          "quote": "128, 120, 112, 104, or 96."
+        }
+      ]
+    },
+    {
+      "id": "gcm-06",
+      "split": "test",
+      "category": "unanswerable",
+      "topic_document_id": "gcm",
+      "query": "What GCM encryption key is deployed in HarborLedger’s production payments service?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No HarborLedger deployment or secret key is documented.",
+      "absent_term": "HarborLedger",
+      "evidence": []
+    },
+    {
+      "id": "cloud-01",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "cloud",
+      "query": "Which cloud characteristic lets a customer provision server time without contacting provider staff?",
+      "answerable": true,
+      "expected_answer": "On-demand self-service.",
+      "evidence": [
+        {
+          "document_id": "cloud",
+          "page": 6,
+          "quote": "On-demand self-service. A consumer can unilaterally provision computing c apabilities"
+        }
+      ]
+    },
+    {
+      "id": "cloud-02",
+      "split": "dev",
+      "category": "fact",
+      "topic_document_id": "cloud",
+      "query": "What tenancy model is used for resource pooling in the NIST cloud definition?",
+      "answerable": true,
+      "expected_answer": "A multi-tenant model.",
+      "evidence": [
+        {
+          "document_id": "cloud",
+          "page": 6,
+          "quote": "resources are pooled to serve multiple consumers using a multi -tenant model"
+        }
+      ]
+    },
+    {
+      "id": "cloud-03",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "cloud",
+      "query": "Which cloud characteristic describes quickly scaling capacity outward and inward with demand?",
+      "answerable": true,
+      "expected_answer": "Rapid elasticity.",
+      "evidence": [
+        {
+          "document_id": "cloud",
+          "page": 6,
+          "quote": "Rapid elasticity . Capabilities can be elastically provisioned and released"
+        }
+      ]
+    },
+    {
+      "id": "cloud-04",
+      "split": "dev",
+      "category": "fact",
+      "topic_document_id": "cloud",
+      "query": "How does measured service control and optimize cloud resource use?",
+      "answerable": true,
+      "expected_answer": "Through a metering capability appropriate to the service.",
+      "evidence": [
+        {
+          "document_id": "cloud",
+          "page": 6,
+          "quote": "Cloud systems automatically control and optimize resource use by leveraging a metering capability1"
+        }
+      ]
+    },
+    {
+      "id": "cloud-05",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "cloud",
+      "query": "What cloud deployment model joins distinct infrastructures while allowing data and applications to move between them?",
+      "answerable": true,
+      "expected_answer": "Hybrid cloud.",
+      "evidence": [
+        {
+          "document_id": "cloud",
+          "page": 7,
+          "quote": "Hybrid cloud. The cloud infrastructure is a composition of two or more distinct cloud infrastructures"
+        }
+      ]
+    },
+    {
+      "id": "cloud-06",
+      "split": "dev",
+      "category": "unanswerable",
+      "topic_document_id": "cloud",
+      "query": "What exact hourly price does the NIST cloud definition quote for an AWS p6-b200.48xlarge instance?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "The definition provides no such commercial instance price.",
+      "absent_term": "p6-b200",
+      "evidence": []
+    },
+    {
+      "id": "zero-trust-01",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "zero-trust",
+      "query": "Does being on the enterprise LAN automatically make an asset trusted under zero trust?",
+      "answerable": true,
+      "expected_answer": "No. Network location alone does not grant implicit trust.",
+      "evidence": [
+        {
+          "document_id": "zero-trust",
+          "page": 4,
+          "quote": "no implicit trust granted to assets or user accounts based solely on their physical or network location"
+        }
+      ]
+    },
+    {
+      "id": "zero-trust-02",
+      "split": "dev",
+      "category": "fact",
+      "topic_document_id": "zero-trust",
+      "query": "On what basis is access to individual enterprise resources granted in zero trust?",
+      "answerable": true,
+      "expected_answer": "Per-session, with least privileges needed for the task.",
+      "evidence": [
+        {
+          "document_id": "zero-trust",
+          "page": 15,
+          "quote": "enterprise resources is granted on a per-session basis."
+        }
+      ]
+    },
+    {
+      "id": "zero-trust-03",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "zero-trust",
+      "query": "What kind of policy decides resource access using client identity, service state, and requesting asset state?",
+      "answerable": true,
+      "expected_answer": "Dynamic policy.",
+      "evidence": [
+        {
+          "document_id": "zero-trust",
+          "page": 15,
+          "quote": "Access to resources is determined by dynamic policy"
+        }
+      ]
+    },
+    {
+      "id": "zero-trust-04",
+      "split": "dev",
+      "category": "fact",
+      "topic_document_id": "zero-trust",
+      "query": "Which zero trust component makes the ultimate decision to grant resource access?",
+      "answerable": true,
+      "expected_answer": "The policy engine (PE).",
+      "evidence": [
+        {
+          "document_id": "zero-trust",
+          "page": 18,
+          "quote": "Policy engine (PE): This component is responsible for the ultimate decision to grant access"
+        }
+      ]
+    },
+    {
+      "id": "zero-trust-05",
+      "split": "dev",
+      "category": "paraphrase",
+      "topic_document_id": "zero-trust",
+      "query": "Which zero trust component sets up or shuts down the communication path by commanding enforcement points?",
+      "answerable": true,
+      "expected_answer": "The policy administrator (PA).",
+      "evidence": [
+        {
+          "document_id": "zero-trust",
+          "page": 18,
+          "quote": "Policy administrator (PA): This component is responsible for establishing and/or shutting down the communication path"
+        }
+      ]
+    },
+    {
+      "id": "zero-trust-06",
+      "split": "dev",
+      "category": "unanswerable",
+      "topic_document_id": "zero-trust",
+      "query": "Which zero trust vendor won the 2026 access gateway procurement at MapleQuay?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No MapleQuay procurement is documented.",
+      "absent_term": "MapleQuay",
+      "evidence": []
+    },
+    {
+      "id": "ai-rmf-01",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "ai-rmf",
+      "query": "Is the AI RMF 1.0 intended to be voluntary or mandatory?",
+      "answerable": true,
+      "expected_answer": "Voluntary.",
+      "evidence": [
+        {
+          "document_id": "ai-rmf",
+          "page": 7,
+          "quote": "The Framework is intended to be voluntary, rights-preserving"
+        }
+      ]
+    },
+    {
+      "id": "ai-rmf-02",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "ai-rmf",
+      "query": "What are the four functions in the AI RMF Core?",
+      "answerable": true,
+      "expected_answer": "GOVERN, MAP, MEASURE, and MANAGE.",
+      "evidence": [
+        {
+          "document_id": "ai-rmf",
+          "page": 25,
+          "quote": "the Core is composed of four functions: GOVERN , MAP, MEASURE , and MANAGE"
+        }
+      ]
+    },
+    {
+      "id": "ai-rmf-03",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "ai-rmf",
+      "query": "Which AI RMF function runs across the risk management process and enables the other functions?",
+      "answerable": true,
+      "expected_answer": "GOVERN.",
+      "evidence": [
+        {
+          "document_id": "ai-rmf",
+          "page": 27,
+          "quote": "GOVERN is a cross-cutting function that is infused throughout AI risk management"
+        }
+      ]
+    },
+    {
+      "id": "ai-rmf-04",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "ai-rmf",
+      "query": "In the AI RMF, outcomes from which function provide the basis for MEASURE and MANAGE?",
+      "answerable": true,
+      "expected_answer": "MAP.",
+      "evidence": [
+        {
+          "document_id": "ai-rmf",
+          "page": 30,
+          "quote": "Outcomes in the MAP function are the basis for the MEASURE and MANAGE functions."
+        }
+      ]
+    },
+    {
+      "id": "ai-rmf-05",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "ai-rmf",
+      "query": "What kinds of tools and methods does the AI RMF MEASURE function employ?",
+      "answerable": true,
+      "expected_answer": "Quantitative, qualitative, or mixed-method tools, techniques, and methodologies.",
+      "evidence": [
+        {
+          "document_id": "ai-rmf",
+          "page": 33,
+          "quote": "The MEASURE function employs quantitative, qualitative, or mixed-method tools, techniques, and methodologies"
+        }
+      ]
+    },
+    {
+      "id": "ai-rmf-06",
+      "split": "test",
+      "category": "unanswerable",
+      "topic_document_id": "ai-rmf",
+      "query": "What numerical AI risk tolerance threshold did JuniperForge approve at its board meeting?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No JuniperForge board decision is documented.",
+      "absent_term": "JuniperForge",
+      "evidence": []
+    },
+    {
+      "id": "authentication-01",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "authentication",
+      "query": "What minimum password length is required for single-factor authentication in SP 800-63B-4?",
+      "answerable": true,
+      "expected_answer": "15 characters.",
+      "evidence": [
+        {
+          "document_id": "authentication",
+          "page": 25,
+          "quote": "a single-factor authentication mechanism to be a minimum of 15 characters"
+        }
+      ]
+    },
+    {
+      "id": "authentication-02",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "authentication",
+      "query": "Under SP 800-63B-4, what minimum value is recommended for the maximum permitted password length?",
+      "answerable": true,
+      "expected_answer": "At least 64 characters.",
+      "evidence": [
+        {
+          "document_id": "authentication",
+          "page": 25,
+          "quote": "SHOULD permit a maximum password length of at least 64 characters."
+        }
+      ]
+    },
+    {
+      "id": "authentication-03",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "authentication",
+      "query": "Does SP 800-63B-4 permit mandatory mixtures of character types for passwords?",
+      "answerable": true,
+      "expected_answer": "No. Such other composition rules must not be imposed.",
+      "evidence": [
+        {
+          "document_id": "authentication",
+          "page": 25,
+          "quote": "SHALL NOT impose other composition rules"
+        }
+      ]
+    },
+    {
+      "id": "authentication-04",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "authentication",
+      "query": "When should a verifier force a password change, rather than requiring routine periodic changes?",
+      "answerable": true,
+      "expected_answer": "When there is evidence that the authenticator has been compromised.",
+      "evidence": [
+        {
+          "document_id": "authentication",
+          "page": 25,
+          "quote": "verifiers SHALL force a change if there is evidence that the authenticator has been compromised."
+        }
+      ]
+    },
+    {
+      "id": "authentication-05",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "authentication",
+      "query": "What exportability property must the authentication key have at AAL3?",
+      "answerable": true,
+      "expected_answer": "It must be non-exportable.",
+      "evidence": [
+        {
+          "document_id": "authentication",
+          "page": 13,
+          "quote": "with a non-exportable authentication key"
+        }
+      ]
+    },
+    {
+      "id": "authentication-06",
+      "split": "test",
+      "category": "unanswerable",
+      "topic_document_id": "authentication",
+      "query": "What is the current authentication recovery code for the user tessa@quartzmail.example?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No such account or recovery code is provided.",
+      "absent_term": "quartzmail",
+      "evidence": []
+    },
+    {
+      "id": "incident-response-01",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "incident-response",
+      "query": "Which CSF 2.0 function restores assets and operations affected by a cybersecurity incident?",
+      "answerable": true,
+      "expected_answer": "Recover (RC).",
+      "evidence": [
+        {
+          "document_id": "incident-response",
+          "page": 13,
+          "quote": "Recover (RC): Assets and operations affected by a cybersecurity incident are restored."
+        }
+      ]
+    },
+    {
+      "id": "incident-response-02",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "incident-response",
+      "query": "In the incident response model, which function finds and analyzes possible attacks and compromises?",
+      "answerable": true,
+      "expected_answer": "Detect (DE).",
+      "evidence": [
+        {
+          "document_id": "incident-response",
+          "page": 13,
+          "quote": "Detect (DE): Possible cybersecurity attacks and compromises are found and analyzed."
+        }
+      ]
+    },
+    {
+      "id": "incident-response-03",
+      "split": "test",
+      "category": "fact",
+      "topic_document_id": "incident-response",
+      "query": "Which function establishes, communicates, and monitors cybersecurity risk management strategy, expectations, and policy?",
+      "answerable": true,
+      "expected_answer": "Govern (GV).",
+      "evidence": [
+        {
+          "document_id": "incident-response",
+          "page": 13,
+          "quote": "Govern (GV): The organization’s cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored."
+        }
+      ]
+    },
+    {
+      "id": "incident-response-04",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "incident-response",
+      "query": "Must every organization adopt the exact incident response life cycle model shown in SP 800-61r3?",
+      "answerable": true,
+      "expected_answer": "No. It should use the framework or model that suits it best.",
+      "evidence": [
+        {
+          "document_id": "incident-response",
+          "page": 9,
+          "quote": "Organizations should use the incident response life cycle framework or model that suits them best."
+        },
+        {
+          "document_id": "incident-response",
+          "page": 14,
+          "quote": "Organizations should use the incident response life cycle framework or model that suits them best."
+        }
+      ]
+    },
+    {
+      "id": "incident-response-05",
+      "split": "test",
+      "category": "paraphrase",
+      "topic_document_id": "incident-response",
+      "query": "Which stakeholders can provide response and recovery priorities for affected systems, data, and business processes?",
+      "answerable": true,
+      "expected_answer": "Asset owners.",
+      "evidence": [
+        {
+          "document_id": "incident-response",
+          "page": 16,
+          "quote": "Asset owners (e.g., system owners, data owners, and business process owners) may have valuable insights on response and recovery priorities"
+        }
+      ]
+    },
+    {
+      "id": "incident-response-06",
+      "split": "test",
+      "category": "unanswerable",
+      "topic_document_id": "incident-response",
+      "query": "How many customer records were stolen in the September 2026 breach at PelicanBridge?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "reason": "No PelicanBridge incident is documented.",
+      "absent_term": "PelicanBridge",
+      "evidence": []
+    }
+  ]
+}

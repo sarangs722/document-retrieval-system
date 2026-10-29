@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ps1 text eol=crlf
+*.png binary
+# Evaluation artifacts are byte-fingerprinted; preserve their original line endings.
+evaluation/**/*.json -text whitespace=cr-at-eol,-blank-at-eof

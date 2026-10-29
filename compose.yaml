@@ -1,0 +1,54 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:${ATLAS_PORT:-8000}:8000"
+    environment:
+      ATLAS_DATABASE_URL: postgresql+psycopg://atlas:${POSTGRES_PASSWORD:-atlas-local-dev}@postgres:5432/atlas
+      ATLAS_DATA_DIR: /app/data
+      ATLAS_CHROMA_HOST: chroma
+      ATLAS_CHROMA_PORT: 8000
+      ATLAS_EMBEDDING_PROVIDER: ${ATLAS_EMBEDDING_PROVIDER:-hash}
+      ATLAS_EMBEDDING_MODEL: ${ATLAS_EMBEDDING_MODEL:-}
+      ATLAS_LLM_PROVIDER: ${ATLAS_LLM_PROVIDER:-extractive}
+      ATLAS_LLM_MODEL: ${ATLAS_LLM_MODEL:-}
+      ATLAS_OLLAMA_BASE_URL: ${ATLAS_OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      ATLAS_OLLAMA_CONTEXT_TOKENS: ${ATLAS_OLLAMA_CONTEXT_TOKENS:-8192}
+      ATLAS_OLLAMA_MAX_OUTPUT_TOKENS: ${ATLAS_OLLAMA_MAX_OUTPUT_TOKENS:-512}
+      ATLAS_CHUNK_STRATEGY: ${ATLAS_CHUNK_STRATEGY:-sentence}
+      ATLAS_API_KEY: ${ATLAS_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    volumes:
+      - atlas-data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      chroma:
+        condition: service_started
+    restart: unless-stopped
+  postgres:
+    image: postgres:17.6-bookworm
+    environment:
+      POSTGRES_USER: atlas
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-atlas-local-dev}
+      POSTGRES_DB: atlas
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U atlas -d atlas"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+  chroma:
+    image: chromadb/chroma:1.5.9
+    volumes:
+      - chroma-data:/data
+    environment:
+      ANONYMIZED_TELEMETRY: "False"
+    restart: unless-stopped
+
+volumes:
+  atlas-data:
+  postgres-data:
+  chroma-data:

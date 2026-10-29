@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "document-atlas"
+version = "0.1.0"
+description = "Citation-aware document retrieval with durable ingestion, hybrid search, and streaming RAG."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn[standard]>=0.34,<1",
+  "sqlalchemy>=2.0.36,<3", "psycopg[binary]>=3.2,<4",
+  "pydantic-settings>=2.7,<3", "python-multipart>=0.0.20,<1",
+  "chromadb>=1.5.9,<2", "pypdf>=5.1,<7", "openai>=1.68,<3",
+  "httpx>=0.28,<1", "alembic>=1.14,<2",
+]
+
+[project.optional-dependencies]
+local = ["fastembed>=0.6,<1"]
+dev = ["pytest>=8.3,<10", "pytest-cov>=6,<8", "ruff>=0.11,<1"]
+
+[project.scripts]
+atlas-evaluate = "app.evaluation:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501", "B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

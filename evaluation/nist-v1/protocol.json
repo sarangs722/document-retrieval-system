@@ -1,0 +1,80 @@
+{
+  "frozen_at": "2026-10-29T12:38:35.777961+00:00",
+  "before_retrieval": true,
+  "dataset_sha256": "f6c7303bfb69edbe9ddc376d4c7a9c47bebbf2acf327b0966f46a3ad26e54567",
+  "manifest_sha256": "1b770cc8c5786ef3517c960ebf51369c4443f0afd8851c304a5fbc09f428a840",
+  "top_k": 5,
+  "modes": [
+    "keyword",
+    "vector",
+    "hybrid"
+  ],
+  "selection_rule": "Maximum dev MRR@5, tie priority keyword, vector, hybrid. Persist selection before first test query.",
+  "candidate_corpus": "All ten documents in both splits. Searches scoped to their uploaded IDs.",
+  "dev_documents": [
+    "sha2",
+    "cloud",
+    "zero-trust"
+  ],
+  "test_documents": [
+    "aes",
+    "sha3",
+    "modes",
+    "gcm",
+    "ai-rmf",
+    "authentication",
+    "incident-response"
+  ],
+  "questions_per_split": {
+    "dev": 18,
+    "test": 42
+  },
+  "parameters": "Existing deployed chunking and retrieval settings frozen; no parameter sweep. Compare the three modes on development, report all three test modes descriptively.",
+  "annotation": "Agent-authored without retrieval results; 50 answerable facts and 10 negatives. Not independently human-adjudicated. Exact-quote alternatives within each source document; judgments are not exhaustive.",
+  "rendered_spot_checks": {
+    "aes": 12,
+    "sha2": 19,
+    "sha3": 9,
+    "modes": 17,
+    "gcm": 16,
+    "cloud": 6,
+    "zero-trust": 18,
+    "ai-rmf": 25,
+    "authentication": 25,
+    "incident-response": 13
+  },
+  "configuration": {
+    "embedding_provider": "fastembed",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "llm_provider": "ollama",
+    "llm_model": "qwen3:1.7b",
+    "chunk_strategy": "semantic",
+    "chunk_words": 180,
+    "chunk_overlap_words": 24,
+    "semantic_threshold": 0.35,
+    "retrieval": {
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75,
+      "rrf_constant": 60,
+      "candidate_multiplier": 6,
+      "candidate_cap": 72,
+      "duplicate_jaccard": 0.85,
+      "min_vector_similarity": 0.6,
+      "max_corpus_chunks": 20000
+    },
+    "implementation_sha256": {
+      "parsing.py": "3ecca1564740830805af6a65b60b115e4eddb561127f2b71127e44fd00c18e06",
+      "embeddings.py": "516e697f384123bff42dec4f7cdc6d2c79320e238440497ac07222a900bd2e9b",
+      "retrieval.py": "c1d37f8f1265db7c60e0a39352dfc232fbed684904c2a0865eed8e18a50a03f9"
+    },
+    "index_signature": "69b73bfdaa62edc583c6d3f7ee19bbd3",
+    "max_upload_mb": 20,
+    "demo_mode": false
+  },
+  "constraints": [
+    "No retrieval/threshold/prompt changes after held-out inspection.",
+    "Negative nonempty search results are not hallucinations; answer-level evaluation is separate.",
+    "This is a small single-domain benchmark, not an accuracy or latency guarantee.",
+    "Known publications may occur in model training; test split is held out only from development mode selection."
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "verified_at": "2026-10-29T06:23:48.592266+00:00",
+  "tests": 45,
+  "passed": 45,
+  "failed": 0,
+  "skipped": 0,
+  "python_statement_coverage_percent": 89.0,
+  "actual_model_enabled": true,
+  "postgres_and_http_chroma_enabled": true,
+  "live_llm_checks": "Recorded separately in local-llm-smoke.json",
+  "cases": [
+    {
+      "suite": "tests.test_api",
+      "name": "test_health_ui_and_schema"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_upload_ingest_search_and_delete"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_deduplicate_and_sanitize_filename"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_document_filter_and_modes"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_queued_and_stale_indexes_are_invisible"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_failed_ingestion_and_retry"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_upload_validation"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_chat_memory_and_citations"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_conversation_serialization_and_active_deletion"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_streaming_event_contract"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_abstain_on_empty_or_unrelated_corpus"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_generation_failure_does_not_persist_half_turn"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_vector_failure_cleans_up_and_remains_hidden"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_auth_applies_to_every_data_endpoint"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_recovery_after_restart"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_stream_cancellation_discards_partial_turn"
+    },
+    {
+      "suite": "tests.test_api",
+      "name": "test_answer_latency_includes_retrieval"
+    },
+    {
+      "suite": "tests.test_deployment_probe",
+      "name": "test_deployment_probe_and_restart"
+    },
+    {
+      "suite": "tests.test_docs",
+      "name": "test_documentation_policy_and_authorization_schema"
+    },
+    {
+      "suite": "tests.test_evaluation",
+      "name": "test_rank_metrics_and_duplicate_results"
+    },
+    {
+      "suite": "tests.test_evaluation",
+      "name": "test_real_retrieval_evaluation"
+    },
+    {
+      "suite": "tests.test_generation",
+      "name": "test_citation_validation_rejects_unknown_and_missing_labels"
+    },
+    {
+      "suite": "tests.test_generation",
+      "name": "test_bm25_and_query_expansion"
+    },
+    {
+      "suite": "tests.test_generation",
+      "name": "test_extractive_answer_prefers_relevant_sentences"
+    },
+    {
+      "suite": "tests.test_heartbeats",
+      "name": "test_heartbeat_keeps_slow_model_stream_open_and_cancel_closes_it"
+    },
+    {
+      "suite": "tests.test_ollama",
+      "name": "test_local_stream_protocol_and_closure"
+    },
+    {
+      "suite": "tests.test_ollama",
+      "name": "test_local_incomplete_or_failed_responses_are_rejected[events0]"
+    },
+    {
+      "suite": "tests.test_ollama",
+      "name": "test_local_incomplete_or_failed_responses_are_rejected[events1]"
+    },
+    {
+      "suite": "tests.test_ollama",
+      "name": "test_local_incomplete_or_failed_responses_are_rejected[events2]"
+    },
+    {
+      "suite": "tests.test_ollama",
+      "name": "test_context_packing_preserves_valid_unicode_and_exact_source_prefixes"
+    },
+    {
+      "suite": "tests.test_ollama",
+      "name": "test_local_provider_settings"
+    },
+    {
+      "suite": "tests.test_parsing",
+      "name": "test_chunk_limit_overlap_and_page_provenance"
+    },
+    {
+      "suite": "tests.test_parsing",
+      "name": "test_semantic_boundary_uses_embeddings"
+    },
+    {
+      "suite": "tests.test_parsing",
+      "name": "test_pdf_empty_encrypted_and_limits"
+    },
+    {
+      "suite": "tests.test_parsing",
+      "name": "test_real_pdf_text_and_page_numbers"
+    },
+    {
+      "suite": "tests.test_parsing",
+      "name": "test_stable_lexical_embeddings_and_signature"
+    },
+    {
+      "suite": "tests.test_parsing",
+      "name": "test_configuration_validates_modes"
+    },
+    {
+      "suite": "tests.test_providers",
+      "name": "test_openai_stream_adapter_sends_bounded_sources_and_checks_completion"
+    },
+    {
+      "suite": "tests.test_providers",
+      "name": "test_openai_incomplete_stream_never_counts_as_success[response.failed]"
+    },
+    {
+      "suite": "tests.test_providers",
+      "name": "test_openai_incomplete_stream_never_counts_as_success[response.incomplete]"
+    },
+    {
+      "suite": "tests.test_providers",
+      "name": "test_openai_incomplete_stream_never_counts_as_success[error]"
+    },
+    {
+      "suite": "tests.test_providers",
+      "name": "test_openai_incomplete_stream_never_counts_as_success[premature_end]"
+    },
+    {
+      "suite": "tests.test_providers",
+      "name": "test_openai_embeddings_batch_and_restore_order"
+    },
+    {
+      "suite": "tests.test_semantic",
+      "name": "test_semantic_search_matches_meaning_without_exact_words"
+    },
+    {
+      "suite": "tests.test_services",
+      "name": "test_postgres_and_http_chroma"
+    }
+  ]
+}

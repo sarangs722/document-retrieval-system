@@ -1,0 +1,532 @@
+{
+  "started_at": "2026-10-29T12:54:03.148291+00:00",
+  "questions_sha256": "f6c7303bfb69edbe9ddc376d4c7a9c47bebbf2acf327b0966f46a3ad26e54567",
+  "retrieval_report_sha256": "79ea0965d006bad53037a652a08bf4d8be2b98469c4883a1af380445a09a0b62",
+  "selected_mode": "hybrid",
+  "review_status": "pending manual review",
+  "scoring": "No automatic factual-accuracy or entailment score. Citation status is structural only.",
+  "questions": [
+    {
+      "id": "aes-01",
+      "query": "Which three key lengths does FIPS 197 specify for AES?",
+      "answerable": true,
+      "expected_answer": "128, 192, and 256 bits.",
+      "labeled_evidence": [
+        {
+          "document_id": "aes",
+          "page": 9,
+          "quote": "AES-128, AES-192, and AES-256, where the suffx indicates the bit length of the key."
+        }
+      ],
+      "stream_metrics": {
+        "time_to_first_token_ms": 15161.05,
+        "elapsed_ms": 16049.69,
+        "text_deltas": 61,
+        "keepalive_comments": 1,
+        "retrieved_passages": 5
+      },
+      "answer": "FIPS 197 specifies three key lengths for AES: 128 bits, 192 bits, and 256 bits [1]. These key lengths correspond to the number of rounds (4, 6, and 8 respectively) in the AES algorithm [1].",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 16024.28,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "aes",
+          "page": 34,
+          "text": "FIPS 197 ADVANCED ENCRYPTION STANDARD (AES) 6. Implementation Considerations 6.1 Key Length Requirements An implementation of the AES algorithm shall support at least one of the three key lengths specifed in Sec. 5: 128, 192, or 256 bits (i.e., Nk = 4, 6, or 8, respectively). Implementations may optionally support two or three key lengths, which may promote the interoperability of algorithm implementations. 6.2 Keying Restrictions When a cryptographic key has been generated appropriately (see NIST Special Publication 800133, Rev. 2 [6] for guidelines), no restriction is imposed when the resulting key is used for the AES algorithm. 6.3 Parameter Extensions In Table 3, this Standard explicitly defnes the allowed values for the key length ( Nk), block size (Nb), and number of rounds (Nr). However, future revisions of this Standard could include changes or additions to the allowed values for those parameters. Therefore, implementers may choose to design their AES implementations with future fexibility in mind. 6.4 Implementation Suggestions Regarding Various Platforms Implementation variations are possible that may, in many cases, offer performance or other advantages.",
+          "text_sha256": "eafcd30bc5141154c139790a565dcf60954b278f1318ef9c2a1c8cb8a9e34cc3",
+          "score": 0.031099,
+          "keyword_score": 21.566593683600214,
+          "vector_score": 0.81892312,
+          "label": 1
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "aes-06",
+      "query": "What AES-256 throughput in gigabytes per second does FIPS 197 report for an NVIDIA RTX 5090?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "labeled_evidence": [],
+      "stream_metrics": {
+        "time_to_first_token_ms": 3955.16,
+        "elapsed_ms": 4929.18,
+        "text_deltas": 71,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The question asks about the AES-256 throughput reported by FIPS 197 for an NVIDIA RTX 5090. However, the provided sources do not contain any information regarding throughput metrics or specific hardware performance data for the NVIDIA RTX 5090. Therefore, the answer cannot be determined from the given sources.",
+      "citation_status": "missing",
+      "grounded": false,
+      "latency_ms": 4913.92,
+      "provider": "ollama",
+      "citations": [],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "sha3-01",
+      "query": "What are the two extendable-output functions named in FIPS 202?",
+      "answerable": true,
+      "expected_answer": "SHAKE128 and SHAKE256.",
+      "labeled_evidence": [
+        {
+          "document_id": "sha3",
+          "page": 3,
+          "quote": "two extendable-output functions (XOFs), called SHAKE128 and SHAKE256."
+        }
+      ],
+      "stream_metrics": {
+        "time_to_first_token_ms": 3675.62,
+        "elapsed_ms": 4315.45,
+        "text_deltas": 47,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "FIPS 202 specifies two extendable-output functions: the KECCAK-p family of mathematical permutations [1]. These permutations are part of the SHA-3 standard and can serve as components of additional cryptographic functions [1].",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 4297.32,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "sha3",
+          "page": 4,
+          "text": "iv Federal Information Processing Standards Publication 202 August 2015 Announcing the SHA-3 STANDARD: PERMUTATION-BASED HASH AND EXTENDABLE OUTPUT FUNCTIONS Federal Information Processing Standards Publications (FIPS PUBS) are issued by the National Institute of Standards and Technology (NIST) after approval by the Secretary of Commerce pursuant to Section 5131 of the Information Technology Management Reform Act of 1996 (Public Law 104-106), and the Computer Security Act of 1987 (Public Law 100-235). 1. Name of Standard: SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions (FIPS PUB 202). 2. Category of Standard : Computer Security Standard, Cryptography. 3. Explanation : This Standard (FIPS 202) specifies the Secure Hash Algorithm-3 (SHA-3) family of functions on binary data. Each of the SHA-3 functions is based on an instance of the KECCAK algorithm that NIST selected as the winner of the SHA-3 Cryptographic Hash Algorithm Competition. This Standard also specifies the K ECCAK-p family of mathematical permutations, including the permutation that underlies K ECCAK, which can serve as the main components of additional cryptographic functions that may be specified in the future.",
+          "text_sha256": "3ea7934c290b6c2e8966bea7562f63648902dfc33ce433442c6f1d7ab4efeaac",
+          "score": 0.032018,
+          "keyword_score": 23.385119693726153,
+          "vector_score": 0.74062118,
+          "label": 1
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "sha3-06",
+      "query": "What is the measured SHAKE128 latency on an Apple M5 processor in this corpus?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "labeled_evidence": [],
+      "stream_metrics": {
+        "time_to_first_token_ms": 4213.78,
+        "elapsed_ms": 4708.67,
+        "text_deltas": 35,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The sources do not provide any information about the measured SHAKE128 latency on an Apple M5 processor. Therefore, I cannot find the answer in the selected documents.",
+      "citation_status": "missing",
+      "grounded": false,
+      "latency_ms": 4692.89,
+      "provider": "ollama",
+      "citations": [],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "modes-01",
+      "query": "Which five confidentiality modes are defined in SP 800-38A?",
+      "answerable": true,
+      "expected_answer": "ECB, CBC, CFB, OFB, and CTR.",
+      "labeled_evidence": [
+        {
+          "document_id": "modes",
+          "page": 5,
+          "quote": "Electronic Codebook (ECB), Cipher Block Chaining (CBC), Cipher Feedback (CFB), Output Feedback (OFB), and Counter (CTR)."
+        }
+      ],
+      "stream_metrics": {
+        "time_to_first_token_ms": 3296.67,
+        "elapsed_ms": 4397.28,
+        "text_deltas": 77,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The five confidentiality modes defined in SP 800-38A are Electronic Codebook (ECB), Cipher Block Chaining (CBC), Cipher Feedback (CFB), Output Feedback (OFB), and Counter (CTR) modes [5]. These modes can provide cryptographic protection for sensitive, but unclassified, computer data when used with a FIPS-approved block cipher algorithm.",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 4378.29,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "modes",
+          "page": 8,
+          "text": "to contradict standards and guidelines that have been made mandatory and binding upon Federal agencies by the Secretary of Commerce under his statutory authority. Nor should this recommendation be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, the Director of the Office of Management and Budget, or any other Federal official. Conformance testing for implementations of the modes of operation that are specified in this recommendation will be conducted within the framework of the Cryptographic Module Validation Program (CMVP), a joint effort of the NIST and the Communications Security Establishment of the Government of Canada. An implementation of a mode of operation must adhere to the requirements in this recommendation in order to be validated under the CMVP. 3 Introduction This recommendation specifies five confidentiality modes of operation for symmetric key block cipher algorithms, such as the algorithm specified in FIPS Pub. 197, the Advanced Encryption Standard (AES) [2]. The modes may be used in conjunction with any symmetric key block cipher algorithm that is approved by a Federal Information Processing Standard (FIPS).",
+          "text_sha256": "05c0f1767360d03dc727bc3530e87319788815de2939800ed6cf1552ea7f7129",
+          "score": 0.029877,
+          "keyword_score": 11.878859523150833,
+          "vector_score": 0.7416109,
+          "label": 5
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "modes-06",
+      "query": "Which block cipher mode is used by the internal database at CedarFin, according to these PDFs?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "labeled_evidence": [],
+      "stream_metrics": {
+        "time_to_first_token_ms": 3267.6,
+        "elapsed_ms": 4464.07,
+        "text_deltas": 87,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The PDFs mention that the five confidentiality modes include Electronic Codebook (ECB), Cipher Block Chaining (CBC), Cipher Feedback (CFB), Output Feedback (OFB), and Counter (CTR). They also state that the CTR mode is specified for use with any FIPS-approved block cipher. However, the specific block cipher mode used by the internal database at CedarFin is not mentioned in the provided sources. [1]",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 4446.43,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "modes",
+          "page": 5,
+          "text": "Abstract This recommendation defines five confidentiality modes of operation for use with an underlying symmetric key block cipher algorithm: Electronic Codebook (ECB), Cipher Block Chaining (CBC), Cipher Feedback (CFB), Output Feedback (OFB), and Counter (CTR). Used with an underlying block cipher algorithm that is approved in a Federal Information Processing Standard (FIPS), these modes can provide cryptographic protection for sensitive, but unclassified, computer data. KEY WORDS: Computer security; cryptography; data security; block cipher; encryption; Federal Information Processing Standard; mode of operation. v",
+          "text_sha256": "7241919fa1b89965d80dd08b03e0a9c1d1181cb10a4ce0ff97a9f2dfa3cf1d3d",
+          "score": 0.030679,
+          "keyword_score": 13.853644798490194,
+          "vector_score": 0.79591,
+          "label": 1
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "gcm-01",
+      "query": "What IV length does SP 800-38D recommend restricting GCM implementations to?",
+      "answerable": true,
+      "expected_answer": "96 bits.",
+      "labeled_evidence": [
+        {
+          "document_id": "gcm",
+          "page": 16,
+          "quote": "restrict support to the length of 96 bits"
+        }
+      ],
+      "stream_metrics": {
+        "time_to_first_token_ms": 4654.64,
+        "elapsed_ms": 5771.19,
+        "text_deltas": 79,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The SP 800-38D recommends that GCM implementations restrict IV lengths to 96 bits [2]. This is specified in the steps for generating the IV, where if the IV length is 96, it is directly used. The documentation must clearly document the responsibilities of the IT professional who configures, deploys, and maintains the GCM implementations [1].",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 5751.85,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "gcm",
+          "page": 30,
+          "text": "or influencing the generation of IVs, GCM shall be implemented only within a cryptogr aphic module that meets the requirements of FIPS Pub. 140-2. In particular, the cryptogra phic boundary of the module shall contain a “generation unit” that produces IVs according to one of the constructions in Sec. 8.2 above. The documentation of the module for its validati on against the requirements of FIPS 140-2 shall describe how the module complies with the unique ness requirement on IVs. At a minimum, the documentation shall address the considerations in this section, and clearly document the responsibilities of the IT pr ofessional who configures, de ploys, and maintains the GCM implementations within a larger system. The following are three important design considerations for GCM modules: 1. The freshness of keys shall be assured, as discussed in Sec. 8.1. 2. The IV shall be a critical security parameter as define d in FIPS Pub. 140-2 until the authenticated encryption function is invoked with the IV.",
+          "text_sha256": "749fe5650f05628e3ccd8b6be96528b80f4f2cac732ec9de471fe075669f2cc2",
+          "score": 0.02904,
+          "keyword_score": 12.341183218002412,
+          "vector_score": 0.75006253,
+          "label": 1
+        },
+        {
+          "document_id": "gcm",
+          "page": 23,
+          "text": "NIST Special Publication 800-38D Algorithm 4: GCM-AEK (IV, P, A) Prerequisites: approved block cipher CIPH with a 128-bit block size; key K; definitions of supported input-output lengths; supported tag length t associated with the key. Input: initialization vector IV (whose length is supported); plaintext P (whose length is supported); additional authenticated data A (whose length is supported). Output: ciphertext C; authentication tag T. Steps: 1. Let H = CIPHK(0128). 2. Define a block, J0, as follows: If len(IV)=96, then let J0 = IV || 031 ||1. If len(IV) ≠ 96, then let s = 128 ⎡len(IV)/128⎤-len(IV), and let J0=GHASHH(IV||0s+64||[len(IV)]64). 3. Let C=GCTRK(inc32(J0), P). 4. Let ()⎡⎤ ( )CCu len 128 len 128−⋅= and let ( )⎡ ⎤ ()AAv len 128 len 128−⋅= . 5. Define a block, S, as follows: S = GHASHH (A || 0v || C || 0u || [len(A)]64 || [len(C)]64). 6. Let () S JT K ,0 . ()t GCTRMSB= 7. Return (C, T). In Step 1, the hash subkey for the GHASH function is generated by applying the block cipher to the “zero” block.",
+          "text_sha256": "efd3a3bfc8dc4835b72e56874be7bebfa9b7d5ddc547708b655e90d1a2fc64c1",
+          "score": 0.028718,
+          "keyword_score": 15.30767934377705,
+          "vector_score": 0.7219241000000001,
+          "label": 2
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "gcm-06",
+      "query": "What GCM encryption key is deployed in HarborLedger’s production payments service?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "labeled_evidence": [],
+      "stream_metrics": {
+        "time_to_first_token_ms": 10327.01,
+        "elapsed_ms": 12052.53,
+        "text_deltas": 120,
+        "keepalive_comments": 1,
+        "retrieved_passages": 5
+      },
+      "answer": "The GCM encryption key used in HarborLedger’s production payments service is specified in the NIST Special Publication 800-38D, which outlines the Galois/Counter Mode (GCM) algorithm for authenticated encryption with associated data. The key is the block cipher key, and it is used in conjunction with a 128-bit block size, as specified in the recommendation [1]. The key is established and managed according to the requirements outlined in the document [4]. \n\nNo specific information is provided about the exact key used in HarborLedger’s production payments service.",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 12019.11,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "gcm",
+          "page": 6,
+          "text": "NIST Special Publication 800-38D Abstract This Recommendation specifies the Galois/Counter Mode (GCM), an algorithm for authenticated encryption with associated data, and its specialization, GMAC, for generating a message authentication code (MAC) on data that is not encrypted. GCM and GMAC are modes of operation for an underlying approved symmetric key block cipher. KEY WORDS: authenticated encryption; auth entication; block ciphe r; confidentiality, cryptography; encryption; information security; mode of operation. iv",
+          "text_sha256": "dd5748dd305b509e71cdc8697bdb09e3390268ab4e7afdc54cef61af3cb319ac",
+          "score": 0.032018,
+          "keyword_score": 12.3403641898276,
+          "vector_score": 0.7177854,
+          "label": 1
+        },
+        {
+          "document_id": "gcm",
+          "page": 15,
+          "text": "be used exclusively for GCM with the chosen block cipher. Additional requirements on the establishment and management of keys are discussed in Sec. 8.1. 5.2 Two GCM Functions The two functions that comprise GCM are calle d authenticated encryption and authenticated decryption. The authenticated encryption functi on encrypts the confidential data and computes an authentication tag on both the confidential data and any additional, non-confidential data. The authenticated decryption function decrypts the confidential data, contingent on the verification of the tag. An implementation may restrict the input to the non-confidential data, i.e., without any confidential data. The resulting variant of GCM is called GMAC. For GMAC, the authenticated encryption and decryption functions become th e functions for generating and verifying an authentication tag on the non-confidential data. The requirements and notation for the input and out put data of these functions are discussed in Secs. 5.2.1 and 5.2.2. Algorithms for computing these functions are given in Sec. 7. 7",
+          "text_sha256": "8297cc3dff2626ea68af93f854aa994f20405804160a10543572aa9d3701ce3d",
+          "score": 0.030282,
+          "keyword_score": 9.514704940911768,
+          "vector_score": 0.73541462,
+          "label": 4
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "ai-rmf-01",
+      "query": "Is the AI RMF 1.0 intended to be voluntary or mandatory?",
+      "answerable": true,
+      "expected_answer": "Voluntary.",
+      "labeled_evidence": [
+        {
+          "document_id": "ai-rmf",
+          "page": 7,
+          "quote": "The Framework is intended to be voluntary, rights-preserving"
+        }
+      ],
+      "stream_metrics": {
+        "time_to_first_token_ms": 4393.89,
+        "elapsed_ms": 5184.75,
+        "text_deltas": 56,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The AI RMF 1.0 is intended to be voluntary, as stated in the passage [1]. The Framework is designed to be voluntary, rights-preserving, and non-sector-specific, allowing organizations of all sizes and sectors to implement the approaches in the Framework [1].",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 5163.99,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "ai-rmf",
+          "page": 7,
+          "text": "on people, society, and the future of AI” (ISO /IEC TR 24368:2022). As directed by the National Artificial Intelligence Initiative Act of 2020 (P.L. 116-283), the goal of the AI RMF is to offer a resource to the organizations designing, developing, deploying, or using AI systems to help manage the many risks of AI and promote trustworthy and responsible development and use of AI systems. The Framework is intended to be voluntary, rights-preserving, non-sector-specific, and use-case agnostic, providing flexibility to organizations of all sizes and in all sectors and throughout society to implement the approaches in the Framework. The Framework is designed to equip organizations and individuals – referred to here as AI actors – with approaches that increase the trustworthiness of AI systems, and to help foster the responsible design, development, deployment, and use of AI systems over time.",
+          "text_sha256": "42d38c59e45a80549ca5a46910e19b1d2df8e19e128f3a26fc4b2f10908299fb",
+          "score": 0.032266,
+          "keyword_score": 15.591688938963728,
+          "vector_score": 0.77405721,
+          "label": 1
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "ai-rmf-06",
+      "query": "What numerical AI risk tolerance threshold did JuniperForge approve at its board meeting?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "labeled_evidence": [],
+      "stream_metrics": {
+        "time_to_first_token_ms": 4545.21,
+        "elapsed_ms": 5083.27,
+        "text_deltas": 37,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The question does not provide any information about JuniperForge's board meeting or any numerical AI risk tolerance threshold approved by them. Therefore, I cannot find the answer in the selected documents.",
+      "citation_status": "missing",
+      "grounded": false,
+      "latency_ms": 5067.2,
+      "provider": "ollama",
+      "citations": [],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "authentication-01",
+      "query": "What minimum password length is required for single-factor authentication in SP 800-63B-4?",
+      "answerable": true,
+      "expected_answer": "15 characters.",
+      "labeled_evidence": [
+        {
+          "document_id": "authentication",
+          "page": 25,
+          "quote": "a single-factor authentication mechanism to be a minimum of 15 characters"
+        }
+      ],
+      "stream_metrics": {
+        "time_to_first_token_ms": 4960.76,
+        "elapsed_ms": 6120.29,
+        "text_deltas": 81,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The minimum password length required for single-factor authentication in NIST SP 800-63B-4 is 15 characters. This is specified in the requirements for passwords used as a single-factor authentication mechanism [3]. \n\n[3] specifies that verifiers and CSPs SHALL require passwords to be a minimum of 15 characters in length when used as a single-factor authentication mechanism.",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 6105.18,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "authentication",
+          "page": 25,
+          "text": "NIST SP 800-63B-4 July 2025 Digital Identity Guidelines Authentication and Authenticator Management unlock passwords or PINs on many devices) are not sent to the verifier and instead used locally to gain access to the authentication secret. Passwords are not phishing-resistant. 3.1.1.1. Password Authenticators Passwords SHALL either be chosen by the subscriber or assigned randomly by the CSP . If the CSP disallows a chosen password because it is on a blocklist of commonly used, expected, or compromised values (see Sec. 3.1.1.2), the subscriber SHALL be required to choose a different password. Other composition requirements for passwords SHALL NOT be imposed. A rationale for this is presented in Appendix A, Strength of Passwords. 3.1.1.2. Password Verifiers The following requirements apply to passwords. 1. Verifiers and CSPs SHALL require passwords that are used as a single-factor authentication mechanism to be a minimum of 15 characters in length. Verifiers and CSPs MAY allow passwords that are only used as part of multi-factor authentication processes to be shorter but SHALL require them to be a minimum of eight characters in length. 2.",
+          "text_sha256": "07f54d92dfba4a64906c5ff36e8160acf6e8639400919f1b529de8e8ccbca16a",
+          "score": 0.030092,
+          "keyword_score": 27.653283403702467,
+          "vector_score": 0.7465454300000001,
+          "label": 3
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "authentication-06",
+      "query": "What is the current authentication recovery code for the user tessa@quartzmail.example?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "labeled_evidence": [],
+      "stream_metrics": {
+        "time_to_first_token_ms": 4151.74,
+        "elapsed_ms": 4664.57,
+        "text_deltas": 36,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The current authentication recovery code for the user tessa@quartzmail.example is not specified in the provided sources. The sources do not mention any specific recovery code for this user.",
+      "citation_status": "missing",
+      "grounded": false,
+      "latency_ms": 4649.42,
+      "provider": "ollama",
+      "citations": [],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "incident-response-01",
+      "query": "Which CSF 2.0 function restores assets and operations affected by a cybersecurity incident?",
+      "answerable": true,
+      "expected_answer": "Recover (RC).",
+      "labeled_evidence": [
+        {
+          "document_id": "incident-response",
+          "page": 13,
+          "quote": "Recover (RC): Assets and operations affected by a cybersecurity incident are restored."
+        }
+      ],
+      "stream_metrics": {
+        "time_to_first_token_ms": 4238.84,
+        "elapsed_ms": 5284.93,
+        "text_deltas": 75,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The CSF 2.0 function that restores assets and operations affected by a cybersecurity incident is \"Recover\" (RC) [1]. This function involves restoring systems and operations to a normal operating condition after an incident has been detected and responded to. The Recover Function is part of the incident response life cycle and is crucial for minimizing the impact of an incident [4].",
+      "citation_status": "valid",
+      "grounded": true,
+      "latency_ms": 5270.04,
+      "provider": "ollama",
+      "citations": [
+        {
+          "document_id": "incident-response",
+          "page": 13,
+          "text": "NIST SP 800-61r3 Incident Response Recommendations and April 2025 Considerations for Cyber Risk Management 5 Fig. 2 shows a high-level incident response life cycle model based on the six CSF 2.0 Functions, which organize cybersecurity outcomes at their highest level: • Govern (GV): The organization’s cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored. • Identify (ID): The organization’s current cybersecurity risks are understood. • Protect (PR): Safeguards to manage the organization’s cybersecurity risks are used. • Detect (DE): Possible cybersecurity attacks and compromises are found and analyzed. • Respond (RS): Actions regarding a detected cybersecurity incident are taken. • Recover (RC): Assets and operations affected by a cybersecurity incident are restored. All six Functions have vital roles in incident response. Govern, Identify, and Protect help organizations prevent some incidents, prepare to handle incidents that do occur, reduce the impact of those incidents, and improve incident response and cybersecurity risk management practices based on lessons learned.",
+          "text_sha256": "d3b968cbd19fe8240b2b8d4fbb72349ac25730d9d84fc1116bd04368c0ad16da",
+          "score": 0.032266,
+          "keyword_score": 23.71115384793694,
+          "vector_score": 0.80000037,
+          "label": 1
+        },
+        {
+          "document_id": "incident-response",
+          "page": 9,
+          "text": "techniques used by their adversaries, nor are they certain about the timing of a future incident other than knowing that another incident is inevitable. However, organizations can use an incident response life cycle framework or model that best suits them to develop strong cybersecurity risk management practices that reduce their risks to acceptable levels. This publication uses the CSF 2.0 Functions, Categories, and Subcategories to organize its recommendations, considerations, and other information regarding incident response as a CSF 2.0 Community Profile. Doing so provides a common taxonomy that is already widely used for communicating about incident response and cybersecurity risk management and governance. This also enables organizations to access a range of online resources mapped to each Function, Category, and Subcategory through the NIST Cybersecurity and Privacy Reference Tool (CPRT). These resources include mappings to other incident response and cybersecurity risk management standards and guidance, as well as sources of implementation guidance that organizations can choose to utilize as needed. Organizations should use the incident response life cycle framework or model that suits them best.",
+          "text_sha256": "3025551e5c70be022c3db9f5723cf5f0af8d6224f8c16618e5990962e51a7a33",
+          "score": 0.030777,
+          "keyword_score": 18.14019349642774,
+          "vector_score": 0.79377767,
+          "label": 4
+        }
+      ],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    },
+    {
+      "id": "incident-response-06",
+      "query": "How many customer records were stolen in the September 2026 breach at PelicanBridge?",
+      "answerable": false,
+      "expected_answer": "The supplied documents do not provide this information.",
+      "labeled_evidence": [],
+      "stream_metrics": {
+        "time_to_first_token_ms": 3749.75,
+        "elapsed_ms": 4561.16,
+        "text_deltas": 58,
+        "keepalive_comments": 0,
+        "retrieved_passages": 5
+      },
+      "answer": "The question asks about the number of customer records stolen in the September 2026 breach at PelicanBridge. However, the provided sources do not contain any information regarding this specific breach or the number of customer records stolen. Therefore, the answer cannot be determined from the given sources.",
+      "citation_status": "missing",
+      "grounded": false,
+      "latency_ms": 4546.04,
+      "provider": "ollama",
+      "citations": [],
+      "conversation_cleanup_statuses": [
+        204
+      ]
+    }
+  ],
+  "configuration": {
+    "embedding_provider": "fastembed",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "llm_provider": "ollama",
+    "llm_model": "qwen3:1.7b",
+    "chunk_strategy": "semantic",
+    "chunk_words": 180,
+    "chunk_overlap_words": 24,
+    "semantic_threshold": 0.35,
+    "retrieval": {
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75,
+      "rrf_constant": 60,
+      "candidate_multiplier": 6,
+      "candidate_cap": 72,
+      "duplicate_jaccard": 0.85,
+      "min_vector_similarity": 0.6,
+      "max_corpus_chunks": 20000
+    },
+    "implementation_sha256": {
+      "parsing.py": "3ecca1564740830805af6a65b60b115e4eddb561127f2b71127e44fd00c18e06",
+      "embeddings.py": "516e697f384123bff42dec4f7cdc6d2c79320e238440497ac07222a900bd2e9b",
+      "retrieval.py": "c1d37f8f1265db7c60e0a39352dfc232fbed684904c2a0865eed8e18a50a03f9"
+    },
+    "index_signature": "69b73bfdaa62edc583c6d3f7ee19bbd3",
+    "max_upload_mb": 20,
+    "demo_mode": false
+  },
+  "finished_at": "2026-10-29T12:55:31.304463+00:00"
+}

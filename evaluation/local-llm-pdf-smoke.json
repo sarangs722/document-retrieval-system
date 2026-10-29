@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-29T06:25:37.684875+00:00",
+  "case": "generated_answer_from_pdf_page_two",
+  "expected_retention_days": 89,
+  "answer": "Aurora keeps audit records for 89 days. This information is cited in source [1].",
+  "provider": "ollama",
+  "citation_status": "valid",
+  "citations": [
+    {
+      "chunk_id": "1d4e28d9-9e5e-4c04-81c4-0ebdb5e53902",
+      "document_id": "6a819c60-363b-417d-bbba-6f8c8031a9db",
+      "filename": "atlas-llm-pdf-083c26ad-017d-4545-98c4-b462c7d6763f.pdf",
+      "page": 2,
+      "text": "The Aurora storage engine keeps audit records for 89 days.",
+      "score": 0.032787,
+      "vector_score": 0.83254087,
+      "keyword_score": 1.7237537559492806,
+      "label": 1
+    }
+  ],
+  "timing": {
+    "time_to_first_token_ms": 8345.91,
+    "elapsed_ms": 8623.82,
+    "text_deltas": 21,
+    "keepalive_comments": 0,
+    "retrieved_passages": 2
+  },
+  "status": "passed",
+  "probe_records_removed": true
+}

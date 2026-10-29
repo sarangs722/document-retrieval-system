@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>Document Atlas — Find the answer. Follow the source.</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Document Atlas home"><span class="brand-icon">a<span>↗</span></span><span>document<br><strong>atlas</strong></span></a>
+    <div class="workspace-label">YOUR WORKSPACE <span>01</span></div>
+    <button class="nav-item active" id="workspace-tab"><span>▦</span> Knowledge workspace</button>
+    <button class="nav-item" id="history-toggle"><span>◷</span> Conversations <span id="history-count" class="nav-count">0</span></button>
+    <div class="history-list" id="history-list" hidden></div>
+    <div class="sidebar-note"><span class="small-star">✳</span><h3>Good answers have roots.</h3><p>Bring your documents together. Trace every answer back to its source.</p></div>
+    <div class="sidebar-bottom"><span class="status-dot" id="health-dot"></span><span id="health-label">Connecting</span><button class="icon-button" id="settings-button" aria-label="API key settings">⚙</button></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>WORKSPACE <span class="breadcrumb">/</span> Document intelligence</span><button class="text-button mobile-history" id="mobile-history" aria-expanded="false" aria-controls="history-list">History ◷</button><a href="/docs" target="_blank" rel="noreferrer">API reference <span>↗</span></a></header>
+    <section class="intro"><div><div class="eyebrow"><span></span> YOUR KNOWLEDGE, CONNECTED</div><h1>Find the answer.<br><span>Follow the source.</span></h1><p>Ask across your documents. Get answers you can trace.</p></div><div class="intro-mark" aria-hidden="true"><span>✳</span><small>LESS SEARCHING.<br>MORE UNDERSTANDING.</small></div></section>
+    <section class="stats" aria-label="Workspace statistics"><div><span class="stat-number" id="stat-documents">0</span><span>DOCUMENTS</span></div><div><span class="stat-number" id="stat-chunks">0</span><span>INDEXED PASSAGES</span></div><div><span class="stat-number" id="stat-ready">0</span><span>READY TO EXPLORE</span></div><div class="mode-stat"><span class="mode-badge" id="provider-badge">Loading mode</span><span id="provider-detail">Checking configuration</span></div></section>
+    <div id="notice" class="notice" role="status" hidden></div>
+    <div class="workspace-grid">
+      <section class="library panel"><div class="panel-title"><h2>Your library <span id="library-count">00</span></h2><button class="text-button" id="refresh-button" aria-label="Refresh library">↻</button></div><p class="panel-description">The starting point for every answer.</p>
+        <label class="dropzone" id="dropzone" tabindex="0"><input id="upload-input" type="file" accept=".pdf,.txt,.md" multiple hidden><span class="upload-icon">↥</span><strong>Drop your documents here</strong><span>or <u>browse files</u></span><small id="upload-formats">PDF, TXT, Markdown · up to 20 MB each</small></label>
+        <div class="library-heading"><span>DOCUMENT</span><span>INCLUDE</span></div><div id="document-list" class="document-list"><div class="empty-library"><span>▤</span><p>A little knowledge goes a long way.<br>Add your first document above.</p></div></div>
+        <p class="library-footnote">All ready documents are searched unless you select specific ones.</p>
+      </section>
+      <section class="chat panel"><div class="panel-title"><h2>Ask your knowledge <span class="live-label"><i></i> LIVE</span></h2><button class="text-button" id="new-chat">＋ New chat</button></div>
+        <div class="chat-tabs" role="tablist" aria-label="Query mode"><button class="selected" id="answer-tab" role="tab" aria-selected="true">Answer with sources</button><button id="search-tab" role="tab" aria-selected="false">Search passages</button></div>
+        <div class="chat-body" id="chat-body" aria-live="polite"><div class="welcome" id="welcome"><div class="welcome-symbol">✳</div><h3>There’s an answer in there.</h3><p>Connect the dots across your library.<br>Start with a question, end with evidence.</p><div class="suggestions"><button data-question="What is the document ingestion pipeline?">How does ingestion work? <span>↗</span></button><button data-question="How are citations validated?">How are citations checked? <span>↗</span></button><button data-question="What are the limitations of this platform?">What are the limitations? <span>↗</span></button></div><small>Tip: upload the included sample documents to explore.</small></div></div>
+        <form id="chat-form" class="composer"><label class="sr-only" for="question">Ask a question about your documents</label><textarea id="question" rows="2" maxlength="4000" placeholder="What would you like to understand?"></textarea><div class="composer-bottom"><div><span class="composer-icon">▤</span><span id="scope-label">All documents</span><span class="composer-divider">·</span><label class="sr-only" for="retrieval-mode">Retrieval method</label><select id="retrieval-mode"><option value="hybrid">Hybrid search</option><option value="vector">Vector search</option><option value="keyword">Keyword search</option></select></div><button id="send-button" type="submit" aria-label="Send question">↗</button></div></form>
+        <p class="chat-footnote">Check the cited passages. Citation labels do not guarantee factual accuracy.</p>
+      </section>
+    </div>
+    <footer><span>DOCUMENT ATLAS</span><span>Built for curiosity. Grounded in evidence.</span><span>v0.1</span></footer>
+  </main>
+  <dialog id="source-dialog"><div class="dialog-heading"><h2 id="source-title">Source passage</h2><button class="icon-button" id="close-source" aria-label="Close source">×</button></div><div id="source-content"></div></dialog>
+  <dialog id="settings-dialog"><div class="dialog-heading"><h2>Workspace access</h2><button class="icon-button" id="close-settings" aria-label="Close settings">×</button></div><p>If the server requires an API key, enter it here. It is kept only for this browser tab session.</p><form id="key-form"><label for="api-key">API key</label><input id="api-key" type="password" autocomplete="off" placeholder="X-API-Key"><button class="primary-button" type="submit">Connect workspace</button></form></dialog>
+</body>
+</html>

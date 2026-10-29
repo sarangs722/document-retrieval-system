@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-29T06:33:03.583650+00:00",
+  "case": "broader_library_explanation_after_prompt_revision",
+  "answer": "Dense vector search and BM25 complement each other by leveraging different strengths. Dense vector search finds passages with similar meaning when semantic embeddings are enabled, allowing for semantic relevance beyond exact matches. BM25, on the other hand, rewards exact terms and is effective for product names and technical vocabulary. Together, they provide a robust retrieval system that benefits from both semantic understanding and exact matching [1].",
+  "citation_status": "valid",
+  "citations": [
+    {
+      "chunk_id": "e1e19ba2-4465-465c-96a5-f2361b32cd42",
+      "document_id": "570c75dc-7b92-4cd9-a3cf-3289d0ce27e8",
+      "filename": "retrieval-design.md",
+      "page": 1,
+      "text": "# Retrieval Design Notes ## Hybrid retrieval Hybrid retrieval combines dense vector search with BM25 keyword search. Vector search can find passages with similar meaning when genuine semantic embeddings are enabled. BM25 rewards exact terms and is useful for product names, identifiers, and technical vocabulary. Reciprocal rank fusion merges the candidate rankings using a rank constant of 60. Fusion scores are ranking signals, not calibrated confidence probabilities. ## Chunking strategy Sentence chunking packs sentences into page-preserving passages with a hard word limit and overlap. Semantic chunking also embeds adjacent sentence units and starts a new passage when their cosine similarity falls below a threshold. Overlap retains context at boundaries. Chunk size, overlap, model name, and strategy are included in the index signature so incompatible indexes are not mixed. ## Embedding choices The default hash embedding provider is a deterministic lexical demonstration. It requires no model download and no API credentials. Hash embeddings do not understand synonyms. FastEmbed runs a real ONNX embedding model locally on the CPU.",
+      "score": 0.032787,
+      "vector_score": 0.79416859,
+      "keyword_score": 7.02161749833756,
+      "label": 1
+    }
+  ],
+  "timing": {
+    "time_to_first_token_ms": 4844.98,
+    "elapsed_ms": 5907.41,
+    "text_deltas": 80,
+    "keepalive_comments": 0,
+    "retrieved_passages": 5
+  },
+  "status": "passed"
+}

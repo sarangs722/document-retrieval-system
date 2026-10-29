@@ -1,0 +1,1192 @@
+{
+  "created_at": "2026-10-28T22:41:46.438095+00:00",
+  "top_k": 5,
+  "question_count": 12,
+  "configuration": {
+    "embedding_provider": "fastembed",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "llm_provider": "extractive",
+    "llm_model": null,
+    "chunk_strategy": "semantic",
+    "index_signature": "69b73bfdaa62edc583c6d3f7ee19bbd3",
+    "max_upload_mb": 20,
+    "demo_mode": false
+  },
+  "corpus": {
+    "documents": 3,
+    "statuses": {
+      "ready": 3
+    },
+    "chunks": 6,
+    "conversations": 0
+  },
+  "warning": "Small synthetic smoke benchmark; not evidence of general retrieval accuracy or production latency.",
+  "modes": {
+    "keyword": {
+      "summary": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.2,
+        "reciprocal_rank": 0.9583,
+        "ndcg_at_k": 0.9692,
+        "hit_at_k": 1,
+        "median_latency_ms": 10.875,
+        "p95_latency_ms": 14.84
+      },
+      "questions": [
+        {
+          "query": "What formats does the document ingestion pipeline accept?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 14.84,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            }
+          ]
+        },
+        {
+          "query": "How do interrupted ingestion jobs recover after a restart?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 10.35,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "Does a valid citation label prove that a passage supports the claim?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 11.04,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            }
+          ]
+        },
+        {
+          "query": "How many conversation turns are included as memory?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 11.43,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "What events appear in a streaming response?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 10.18,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            }
+          ]
+        },
+        {
+          "query": "How does reciprocal rank fusion combine BM25 with vector search?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 10.22,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "When does semantic chunking start a new passage?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 12.05,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "Which embedding provider can run a real model locally on CPU?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 11.66,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Which retrieval evaluation metrics are measured?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 12.33,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Does the deployment support multiple API processes?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 9.89,
+          "retrieved": [
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Does deleting a document remove excerpts from saved conversations?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 10.71,
+          "retrieved": [
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            }
+          ]
+        },
+        {
+          "query": "What are the upload, PDF page, and corpus limits?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309297535714575,
+          "hit_at_k": 1,
+          "latency_ms": 10.38,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            }
+          ]
+        }
+      ]
+    },
+    "vector": {
+      "summary": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.2,
+        "reciprocal_rank": 0.9444,
+        "ndcg_at_k": 0.9583,
+        "hit_at_k": 1,
+        "median_latency_ms": 28.439999999999998,
+        "p95_latency_ms": 33.32
+      },
+      "questions": [
+        {
+          "query": "What formats does the document ingestion pipeline accept?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 27.91,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            }
+          ]
+        },
+        {
+          "query": "How do interrupted ingestion jobs recover after a restart?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 30.89,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Does a valid citation label prove that a passage supports the claim?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 28.87,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            }
+          ]
+        },
+        {
+          "query": "How many conversation turns are included as memory?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 26.81,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            }
+          ]
+        },
+        {
+          "query": "What events appear in a streaming response?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 26.68,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            }
+          ]
+        },
+        {
+          "query": "How does reciprocal rank fusion combine BM25 with vector search?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 25.68,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            }
+          ]
+        },
+        {
+          "query": "When does semantic chunking start a new passage?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 28.73,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            }
+          ]
+        },
+        {
+          "query": "Which embedding provider can run a real model locally on CPU?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 33.32,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "Which retrieval evaluation metrics are measured?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 26.95,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Does the deployment support multiple API processes?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 28.15,
+          "retrieved": [
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            }
+          ]
+        },
+        {
+          "query": "Does deleting a document remove excerpts from saved conversations?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 0.3333333333333333,
+          "ndcg_at_k": 0.5,
+          "hit_at_k": 1,
+          "latency_ms": 30.27,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "What are the upload, PDF page, and corpus limits?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 29.99,
+          "retrieved": [
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid": {
+      "summary": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.2,
+        "reciprocal_rank": 0.9583,
+        "ndcg_at_k": 0.9692,
+        "hit_at_k": 1,
+        "median_latency_ms": 28.25,
+        "p95_latency_ms": 33.09
+      },
+      "questions": [
+        {
+          "query": "What formats does the document ingestion pipeline accept?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 28.7,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            }
+          ]
+        },
+        {
+          "query": "How do interrupted ingestion jobs recover after a restart?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 30.15,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "Does a valid citation label prove that a passage supports the claim?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 33.09,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "How many conversation turns are included as memory?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 29.44,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            }
+          ]
+        },
+        {
+          "query": "What events appear in a streaming response?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 27.05,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            }
+          ]
+        },
+        {
+          "query": "How does reciprocal rank fusion combine BM25 with vector search?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 27.86,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "When does semantic chunking start a new passage?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 27.4,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        },
+        {
+          "query": "Which embedding provider can run a real model locally on CPU?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 30.28,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Which retrieval evaluation metrics are measured?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 26.03,
+          "retrieved": [
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Does the deployment support multiple API processes?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 23.88,
+          "retrieved": [
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "cca11db2-c08e-46a9-b4b0-b85df635e70f"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            }
+          ]
+        },
+        {
+          "query": "Does deleting a document remove excerpts from saved conversations?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "hit_at_k": 1,
+          "latency_ms": 28.64,
+          "retrieved": [
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            }
+          ]
+        },
+        {
+          "query": "What are the upload, PDF page, and corpus limits?",
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309297535714575,
+          "hit_at_k": 1,
+          "latency_ms": 25.8,
+          "retrieved": [
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "a1c61907-760f-436e-af5e-53164fd791be"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "c93c2cea-3f35-4b9a-aa6e-73c360784bd3"
+            },
+            {
+              "filename": "retrieval-design.md",
+              "page": 1,
+              "chunk_id": "40cc3d52-a755-4ca3-b5b5-655aec923eb0"
+            },
+            {
+              "filename": "platform-guide.md",
+              "page": 1,
+              "chunk_id": "426dc441-0161-45fc-af28-c079546fc7bb"
+            },
+            {
+              "filename": "operations.md",
+              "page": 1,
+              "chunk_id": "3795cbd6-c2ae-4770-81e4-ff04c932f5e0"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dataset_sha256": "355944401c129b90c6d049db92c97e00bf49549dd7989054eabfdd0c42c0c285"
+}

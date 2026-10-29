@@ -1,0 +1,90 @@
+{
+  "locked_at": "2026-10-29T12:52:47.164180+00:00",
+  "fingerprints": {
+    "manifest_sha256": "1b770cc8c5786ef3517c960ebf51369c4443f0afd8851c304a5fbc09f428a840",
+    "questions_sha256": "f6c7303bfb69edbe9ddc376d4c7a9c47bebbf2acf327b0966f46a3ad26e54567",
+    "runner_sha256": "5c41189273d972ade5046bdcce985d88ec2fdb55986b38fd443c4765156ce7c5",
+    "uv_lock_sha256": "23dbb2cde1ef1e328333fab742b3f19908b30614f2f90c1154bb39cc8555fe73"
+  },
+  "configuration": {
+    "embedding_provider": "fastembed",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "llm_provider": "ollama",
+    "llm_model": "qwen3:1.7b",
+    "chunk_strategy": "semantic",
+    "chunk_words": 180,
+    "chunk_overlap_words": 24,
+    "semantic_threshold": 0.35,
+    "retrieval": {
+      "bm25_k1": 1.5,
+      "bm25_b": 0.75,
+      "rrf_constant": 60,
+      "candidate_multiplier": 6,
+      "candidate_cap": 72,
+      "duplicate_jaccard": 0.85,
+      "min_vector_similarity": 0.6,
+      "max_corpus_chunks": 20000
+    },
+    "implementation_sha256": {
+      "parsing.py": "3ecca1564740830805af6a65b60b115e4eddb561127f2b71127e44fd00c18e06",
+      "embeddings.py": "516e697f384123bff42dec4f7cdc6d2c79320e238440497ac07222a900bd2e9b",
+      "retrieval.py": "c1d37f8f1265db7c60e0a39352dfc232fbed684904c2a0865eed8e18a50a03f9"
+    },
+    "index_signature": "69b73bfdaa62edc583c6d3f7ee19bbd3",
+    "max_upload_mb": 20,
+    "demo_mode": false
+  },
+  "selected_mode": "hybrid",
+  "dev_summaries": {
+    "keyword": {
+      "answerable_questions": 15,
+      "unanswerable_questions": 3,
+      "evidence_hit_at_1": 0.5333333333333333,
+      "evidence_hit_at_3": 0.6666666666666666,
+      "evidence_hit_at_5": 0.8,
+      "mrr_at_5": 0.6188888888888889,
+      "negative_empty_result_rate": 0.0,
+      "median_latency_ms": 195.08,
+      "p95_latency_ms": 305.06,
+      "missed_question_ids": [
+        "sha2-01",
+        "sha2-02",
+        "sha2-04"
+      ]
+    },
+    "vector": {
+      "answerable_questions": 15,
+      "unanswerable_questions": 3,
+      "evidence_hit_at_1": 0.6,
+      "evidence_hit_at_3": 0.7333333333333333,
+      "evidence_hit_at_5": 0.7333333333333333,
+      "mrr_at_5": 0.6444444444444445,
+      "negative_empty_result_rate": 0.0,
+      "median_latency_ms": 215.92000000000002,
+      "p95_latency_ms": 431.16,
+      "missed_question_ids": [
+        "sha2-01",
+        "sha2-02",
+        "zero-trust-04",
+        "zero-trust-05"
+      ]
+    },
+    "hybrid": {
+      "answerable_questions": 15,
+      "unanswerable_questions": 3,
+      "evidence_hit_at_1": 0.6,
+      "evidence_hit_at_3": 0.7333333333333333,
+      "evidence_hit_at_5": 0.8,
+      "mrr_at_5": 0.6688888888888889,
+      "negative_empty_result_rate": 0.0,
+      "median_latency_ms": 217.695,
+      "p95_latency_ms": 329.78,
+      "missed_question_ids": [
+        "sha2-01",
+        "zero-trust-04",
+        "zero-trust-05"
+      ]
+    }
+  },
+  "rule": "Maximum dev MRR@5; ties: keyword, vector, hybrid"
+}

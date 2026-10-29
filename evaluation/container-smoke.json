@@ -1,0 +1,46 @@
+{
+  "run_id": "2acdd102-2b8b-441f-a653-6c932acf7322",
+  "base_url": "http://127.0.0.1:8002",
+  "documents": [
+    {
+      "id": "10b18524-0b4c-4b18-a482-3ebbf2fecc59",
+      "filename": "atlas-smoke-2acdd102-2b8b-441f-a653-6c932acf7322.pdf"
+    },
+    {
+      "id": "5135b271-5c95-4d7c-b12f-80ffe6d751a5",
+      "filename": "atlas-smoke-2acdd102-2b8b-441f-a653-6c932acf7322.md"
+    }
+  ],
+  "conversations": [
+    "a99f1df1-dd9a-4ffc-b5bc-a09ff777aadf",
+    "3630f6ba-7db2-4411-9f3f-d5dd1d3b29a3"
+  ],
+  "checks": [
+    "pdf_and_markdown_ingestion",
+    "content_deduplication",
+    "pdf_page_provenance",
+    "document_filtered_retrieval",
+    "page_cited_answer",
+    "followup_memory",
+    "persisted_conversation",
+    "streaming_event_contract",
+    "sql_and_vector_persistence_after_restart",
+    "conversation_persistence_after_restart",
+    "source_file_persistence_and_reindex",
+    "probe_deletion_and_retrieval_exclusion"
+  ],
+  "cleaned_up": true,
+  "configuration": {
+    "embedding_provider": "fastembed",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "llm_provider": "extractive",
+    "llm_model": null,
+    "chunk_strategy": "semantic",
+    "index_signature": "69b73bfdaa62edc583c6d3f7ee19bbd3",
+    "max_upload_mb": 20,
+    "demo_mode": false
+  },
+  "seed_verified_at": "2026-10-29T04:42:22.765528+00:00",
+  "status": "passed",
+  "persistence_verified_at": "2026-10-29T04:45:33.390554+00:00"
+}

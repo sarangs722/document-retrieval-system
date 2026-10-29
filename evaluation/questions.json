@@ -1,0 +1,15 @@
+[
+  {"query": "What formats does the document ingestion pipeline accept?", "relevant": [{"filename": "platform-guide.md", "contains": "accepts PDF"}]},
+  {"query": "How do interrupted ingestion jobs recover after a restart?", "relevant": [{"filename": "platform-guide.md", "contains": "interrupted during processing"}]},
+  {"query": "Does a valid citation label prove that a passage supports the claim?", "relevant": [{"filename": "platform-guide.md", "contains": "does not prove"}]},
+  {"query": "How many conversation turns are included as memory?", "relevant": [{"filename": "platform-guide.md", "contains": "six turns"}]},
+  {"query": "What events appear in a streaming response?", "relevant": [{"filename": "platform-guide.md", "contains": "delta events"}]},
+  {"query": "How does reciprocal rank fusion combine BM25 with vector search?", "relevant": [{"filename": "retrieval-design.md", "contains": "rank constant of 60"}]},
+  {"query": "When does semantic chunking start a new passage?", "relevant": [{"filename": "retrieval-design.md", "contains": "cosine similarity"}]},
+  {"query": "Which embedding provider can run a real model locally on CPU?", "relevant": [{"filename": "retrieval-design.md", "contains": "ONNX"}]},
+  {"query": "Which retrieval evaluation metrics are measured?", "relevant": [{"filename": "retrieval-design.md", "contains": "reciprocal rank"}]},
+  {"query": "Does the deployment support multiple API processes?", "relevant": [{"filename": "operations.md", "contains": "one API process"}]},
+  {"query": "Does deleting a document remove excerpts from saved conversations?", "relevant": [{"filename": "operations.md", "contains": "citation snapshots"}]},
+  {"query": "What are the upload, PDF page, and corpus limits?", "relevant": [{"filename": "operations.md", "contains": "20 MB"}]}
+]
+

@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-10-29T12:47:23.280998+00:00",
+  "questions_sha256": "f6c7303bfb69edbe9ddc376d4c7a9c47bebbf2acf327b0966f46a3ad26e54567",
+  "question_ids": [
+    "aes-01",
+    "aes-06",
+    "sha3-01",
+    "sha3-06",
+    "modes-01",
+    "modes-06",
+    "gcm-01",
+    "gcm-06",
+    "ai-rmf-01",
+    "ai-rmf-06",
+    "authentication-01",
+    "authentication-06",
+    "incident-response-01",
+    "incident-response-06"
+  ],
+  "selection": "First answerable question and the negative for each of the seven test topic documents, selected before retrieval results were available.",
+  "mode": "Use the mode selected on development by the frozen retrieval procedure. No tuning on these answers.",
+  "generation": "Local Ollama qwen3:1.7b, unchanged shared generation prompts. No paid calls. Stateless questions; delete the created conversations after snapshots are saved.",
+  "review": "Coding-agent manual review of actual answer claims against exact citation snapshots and PDF evidence. Not independent human adjudication and not a general accuracy estimate. No regex-based entailment score. Keep failures and unsupported claims."
+}

@@ -1,0 +1,23 @@
+{
+  "verified_at": "2026-10-29T10:16:10.36457+05:30",
+  "operating_system": "Linux",
+  "python": "3.12.16",
+  "process_uid": 10001,
+  "database_backend": "postgresql",
+  "database_version": "PostgreSQL 17.6 (Debian 17.6-2.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+  "vector_connection": "http",
+  "embedding_provider": "fastembed",
+  "llm_provider": "extractive",
+  "packages": {
+    "fastapi": "0.162.0",
+    "sqlalchemy": "2.1.6",
+    "psycopg": "3.3.6",
+    "chromadb": "1.5.9",
+    "fastembed": "0.9.1",
+    "pypdf": "6.21.4"
+  },
+  "chroma_server_reported_version": "1.0.0",
+  "chroma_image_tag": "chromadb/chroma:1.5.9",
+  "api_image_id": "sha256:bc7a01e0a9e4159bb359c7e02d524c3434a293432f056e6e081c853c337af502",
+  "api_image_bytes": 1023260111
+}

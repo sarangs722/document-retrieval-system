@@ -1,0 +1,23 @@
+{
+  "verified_at": "2026-10-29T06:23:56.242898+00:00",
+  "ollama_version": "0.35.0",
+  "model": "qwen3:1.7b",
+  "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "downloaded_size_bytes": 1359293444,
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "qwen3",
+    "families": [
+      "qwen3"
+    ],
+    "parameter_size": "2.0B",
+    "quantization_level": "Q4_K_M",
+    "context_length": 40960,
+    "embedding_length": 2048
+  },
+  "loaded_context_tokens": null,
+  "loaded_vram_bytes": null,
+  "service_binding": "127.0.0.1:11434",
+  "cloud_features_disabled_for_prepared_service": true
+}

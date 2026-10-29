@@ -1,0 +1,159 @@
+{
+  "run_id": "ee9782ec-ed33-47dd-b72d-fdfa3a892bd7",
+  "verified_at": "2026-10-29T06:33:04.819629+00:00",
+  "base_url": "http://127.0.0.1:8002",
+  "warning": "Synthetic expected-fact smoke checks only. Not an entailment, safety, general accuracy, or production latency benchmark.",
+  "cases": [
+    {
+      "name": "retention_paraphrase",
+      "question": "After how many days does Meridian delete audit history?",
+      "expected_pattern": "\\b73[\\s-]+days?\\b",
+      "answer": "Meridian retains audit logs for 73 days [1]. Therefore, Meridian deletes audit history after 73 days.",
+      "citation_status": "valid",
+      "citations": [
+        {
+          "filename": "atlas-llm-ee9782ec-ed33-47dd-b72d-fdfa3a892bd7-meridian.txt",
+          "page": 1,
+          "label": 1
+        }
+      ],
+      "checks": {
+        "expected_fact_or_abstention": true,
+        "document_filter_respected": true,
+        "real_context_retrieved": true,
+        "configured_provider_used": true,
+        "valid_citation_labels": true
+      },
+      "timing": {
+        "time_to_first_token_ms": 789.96,
+        "elapsed_ms": 1115.72,
+        "text_deltas": 26,
+        "keepalive_comments": 0,
+        "retrieved_passages": 1
+      },
+      "passed": true
+    },
+    {
+      "name": "encryption",
+      "question": "Which encryption algorithm protects Meridian backups?",
+      "expected_pattern": "AES[\\s-]?256",
+      "answer": "The encryption algorithm protecting Meridian backups is AES-256, as stated in the source passage [1].",
+      "citation_status": "valid",
+      "citations": [
+        {
+          "filename": "atlas-llm-ee9782ec-ed33-47dd-b72d-fdfa3a892bd7-meridian.txt",
+          "page": 1,
+          "label": 1
+        }
+      ],
+      "checks": {
+        "expected_fact_or_abstention": true,
+        "document_filter_respected": true,
+        "real_context_retrieved": true,
+        "configured_provider_used": true,
+        "valid_citation_labels": true
+      },
+      "timing": {
+        "time_to_first_token_ms": 331.57,
+        "elapsed_ms": 628.99,
+        "text_deltas": 23,
+        "keepalive_comments": 0,
+        "retrieved_passages": 1
+      },
+      "passed": true
+    },
+    {
+      "name": "conversation_followup",
+      "question": "And when are its backups scheduled?",
+      "expected_pattern": "(?:0?2:00|2\\s*a\\.?m\\.?).*UTC",
+      "answer": "Meridian backups are scheduled to run daily at 02:00 UTC, as stated in the source passage [1]. The schedule is confirmed by the audit log retention period of 73 days, which aligns with the backup schedule [1].",
+      "citation_status": "valid",
+      "citations": [
+        {
+          "filename": "atlas-llm-ee9782ec-ed33-47dd-b72d-fdfa3a892bd7-meridian.txt",
+          "page": 1,
+          "label": 1
+        }
+      ],
+      "checks": {
+        "expected_fact_or_abstention": true,
+        "document_filter_respected": true,
+        "real_context_retrieved": true,
+        "configured_provider_used": true,
+        "valid_citation_labels": true,
+        "memory_query_expanded": true
+      },
+      "timing": {
+        "time_to_first_token_ms": 636.07,
+        "elapsed_ms": 1272.81,
+        "text_deltas": 52,
+        "keepalive_comments": 0,
+        "retrieved_passages": 1
+      },
+      "passed": true
+    },
+    {
+      "name": "second_document_filter",
+      "question": "How long before Borealis retries a failed ingestion job?",
+      "expected_pattern": "\\b11[\\s-]+seconds?\\b",
+      "answer": "Borealis retries failed ingestion jobs after 11 seconds, as stated in the source passage [1]. The audit logs are retained for 9 days, but this information is not directly relevant to the question about the retry duration. Therefore, the answer is [1].",
+      "citation_status": "valid",
+      "citations": [
+        {
+          "filename": "atlas-llm-ee9782ec-ed33-47dd-b72d-fdfa3a892bd7-borealis.txt",
+          "page": 1,
+          "label": 1
+        }
+      ],
+      "checks": {
+        "expected_fact_or_abstention": true,
+        "document_filter_respected": true,
+        "real_context_retrieved": true,
+        "configured_provider_used": true,
+        "valid_citation_labels": true
+      },
+      "timing": {
+        "time_to_first_token_ms": 574.44,
+        "elapsed_ms": 1242.31,
+        "text_deltas": 55,
+        "keepalive_comments": 0,
+        "retrieved_passages": 1
+      },
+      "passed": true
+    },
+    {
+      "name": "unanswerable_with_context",
+      "question": "Based on Meridian's audit retention and backup policy, who is Meridian's CEO?",
+      "expected_pattern": "not |no |cannot|can't|couldn't|unknown|unspecified|unavailable|don't know|do not",
+      "answer": "The sources do not provide information about Meridian's CEO. Therefore, the answer cannot be determined from the provided documents.",
+      "citation_status": "missing",
+      "citations": [],
+      "checks": {
+        "expected_fact_or_abstention": true,
+        "document_filter_respected": true,
+        "real_context_retrieved": true,
+        "configured_provider_used": true
+      },
+      "timing": {
+        "time_to_first_token_ms": 556.99,
+        "elapsed_ms": 860.3,
+        "text_deltas": 24,
+        "keepalive_comments": 0,
+        "retrieved_passages": 1
+      },
+      "passed": true
+    }
+  ],
+  "configuration": {
+    "embedding_provider": "fastembed",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "llm_provider": "ollama",
+    "llm_model": "qwen3:1.7b",
+    "chunk_strategy": "semantic",
+    "index_signature": "69b73bfdaa62edc583c6d3f7ee19bbd3",
+    "max_upload_mb": 20,
+    "demo_mode": false
+  },
+  "probe_records_removed": true,
+  "status": "passed"
+}

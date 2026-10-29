@@ -1,0 +1,122 @@
+{
+  "name": "nist-technical-v1",
+  "version": 1,
+  "created_date": "2026-10-29",
+  "purpose": "A fixed-document retrieval and grounded-answer benchmark, not current security guidance.",
+  "rights_url": "https://www.nist.gov/nist-research-library/library-faqs",
+  "attribution": "Reprinted courtesy of the National Institute of Standards and Technology, U.S. Department of Commerce. Not copyrightable in the United States.",
+  "redistribution": "Source PDFs are downloaded into ignored data/benchmarks/nist-v1, not bundled in the repository. Preserve any publication-specific notices.",
+  "split_policy": "Document-disjoint development and test question groups. All ten documents are retrieval candidates in both splits. No retrieval results are used to author labels. Test results must not be used for parameter selection.",
+  "documents": [
+    {
+      "id": "aes",
+      "split": "test",
+      "filename": "nist-fips-197-upd1.pdf",
+      "title": "Advanced Encryption Standard (AES), FIPS 197-upd1",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf",
+      "sha256": "62c86eb567f13edb8f71826e985da870b04ef6381634f303cdb16e84d47becd1",
+      "page_count": 46,
+      "size_bytes": 1184436,
+      "downloaded_at": "2026-10-29T12:23:05.678430+00:00"
+    },
+    {
+      "id": "sha2",
+      "split": "dev",
+      "filename": "nist-fips-180-4.pdf",
+      "title": "Secure Hash Standard, FIPS 180-4",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
+      "sha256": "0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82",
+      "page_count": 36,
+      "size_bytes": 833315,
+      "downloaded_at": "2026-10-29T12:23:06.342606+00:00"
+    },
+    {
+      "id": "sha3",
+      "split": "test",
+      "filename": "nist-fips-202.pdf",
+      "title": "SHA-3 Standard, FIPS 202",
+      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf",
+      "sha256": "1592607831ff0908cc590632ce371c6c95e94025bb1a0c8ae90a4d0ec1ed025e",
+      "page_count": 37,
+      "size_bytes": 1459683,
+      "downloaded_at": "2026-10-29T12:23:08.180270+00:00"
+    },
+    {
+      "id": "modes",
+      "split": "test",
+      "filename": "nist-sp-800-38a.pdf",
+      "title": "Recommendation for Block Cipher Modes of Operation, SP 800-38A",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf",
+      "sha256": "66821162de1e7130c5fb5eedb22140d8d6d013ec51af4550bb095c2a9481a00e",
+      "page_count": 66,
+      "size_bytes": 378266,
+      "downloaded_at": "2026-10-29T12:23:08.908738+00:00"
+    },
+    {
+      "id": "gcm",
+      "split": "test",
+      "filename": "nist-sp-800-38d.pdf",
+      "title": "Galois/Counter Mode (GCM) and GMAC, SP 800-38D",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf",
+      "sha256": "d99f3921ccebca049e7522426553aba071dae14ec3d5b6041e8c111a6cb57bba",
+      "page_count": 39,
+      "size_bytes": 271960,
+      "downloaded_at": "2026-10-29T12:23:09.970658+00:00"
+    },
+    {
+      "id": "cloud",
+      "split": "dev",
+      "filename": "nist-sp-800-145.pdf",
+      "title": "The NIST Definition of Cloud Computing, SP 800-145",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+      "sha256": "7b0c1a9fdfc67218b8ba2098f448c100c27070db91736b3c87fed63bfa21d418",
+      "page_count": 7,
+      "size_bytes": 85781,
+      "downloaded_at": "2026-10-29T12:23:10.685223+00:00"
+    },
+    {
+      "id": "zero-trust",
+      "split": "dev",
+      "filename": "nist-sp-800-207.pdf",
+      "title": "Zero Trust Architecture, SP 800-207",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+      "sha256": "0290d6ece24874287316f4bf430fef770aa4ec08a2227c8f2c1e5b2ff975e03d",
+      "page_count": 59,
+      "size_bytes": 966908,
+      "downloaded_at": "2026-10-29T12:23:12.820809+00:00"
+    },
+    {
+      "id": "ai-rmf",
+      "split": "test",
+      "filename": "nist-ai-100-1.pdf",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "sha256": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1",
+      "page_count": 48,
+      "size_bytes": 1946127,
+      "downloaded_at": "2026-10-29T12:23:13.493151+00:00"
+    },
+    {
+      "id": "authentication",
+      "split": "test",
+      "filename": "nist-sp-800-63b-4.pdf",
+      "title": "Digital Identity Guidelines: Authentication and Authenticator Management, SP 800-63B-4",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b-4.pdf",
+      "sha256": "d9ab89576b5ae2cfb3ba37781110788dea27a85a5079496dbfc1a79834670afd",
+      "page_count": 129,
+      "size_bytes": 993734,
+      "downloaded_at": "2026-10-29T12:23:15.960904+00:00"
+    },
+    {
+      "id": "incident-response",
+      "split": "test",
+      "filename": "nist-sp-800-61r3.pdf",
+      "title": "Incident Response Recommendations and Considerations for Cybersecurity Risk Management, SP 800-61r3",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf",
+      "sha256": "e5593d6bb85daecec7e8d9549400c7b3473bcc3f06e469c82218073afa7fba2d",
+      "page_count": 48,
+      "size_bytes": 1040566,
+      "downloaded_at": "2026-10-29T12:23:16.383823+00:00"
+    }
+  ]
+}

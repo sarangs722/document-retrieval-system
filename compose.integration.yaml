@@ -1,0 +1,9 @@
+# Optional loopback-only service ports for tests run from the host machine.
+# docker compose -f compose.yaml -f compose.integration.yaml up -d --wait
+services:
+  postgres:
+    ports:
+      - "127.0.0.1:${ATLAS_TEST_POSTGRES_PORT:-5433}:5432"
+  chroma:
+    ports:
+      - "127.0.0.1:${ATLAS_TEST_CHROMA_PORT:-8001}:8000"

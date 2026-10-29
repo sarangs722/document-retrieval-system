@@ -1,0 +1,10 @@
+{
+  "case": "broader_library_explanation",
+  "question": "Explain how dense vector search and BM25 complement each other.",
+  "observed_in_browser": true,
+  "provider": "ollama",
+  "model": "qwen3:1.7b",
+  "citation_count": 0,
+  "status": "needs_review",
+  "note": "The first broader library answer omitted citations despite answering the question. The application surfaced the missing citation check instead of treating it as grounded. Prompt instructions were subsequently tightened and moved after the evidence. This observed limitation is retained rather than folded into the five passing synthetic fact probes."
+}
